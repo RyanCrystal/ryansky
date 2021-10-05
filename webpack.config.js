@@ -21,7 +21,7 @@ module.exports = {
       }
   ]},
   output: {
-    path: path.join(__dirname, '')
+    path: path.join(__dirname)
   },
   plugins: [htmlPlugin]
 };
