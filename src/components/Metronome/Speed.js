@@ -1,35 +1,58 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import useLongPress from "../../tools/useLongPress";
 import "./Speed.css";
 
 const Speed = () => {
   const [speed, setSpeed] = useState(60);
+  const interval = useRef();
+
   const changeHandler = (e) => {
-    setSpeed((prev) => e.target.value);
-  };
-  const decreaseSpeedHandler = () => {
-    setSpeed((prev) => prev - 1);
-  };
-  const increaseSpeedHandler = () => {
-    setSpeed((prev) => prev + 1);
+    setSpeed((prev) => parseInt(e.target.value));
   };
 
   const onLongPressPlus = () => {
-    console.log("longpress plus is triggered");
+    var time = 200;
+
+    const request = () => {
+      clearInterval(interval.current);
+      setSpeed((prev) => {
+        return prev < 300 ? parseInt(prev) + 1 : prev;
+      });
+      time = time * 0.95 < 40 ? 40 : time * 0.95;
+      console.log(time);
+      interval.current = setInterval(request, time);
+    };
+
+    interval.current = setInterval(request, time);
   };
 
   const onClickPlus = () => {
-    console.log("click plus is triggered");
+    setSpeed((prev) => parseInt(prev) + 1);
+  };
+
+  const onLongPressLeave = () => {
+    clearInterval(interval.current);
   };
 
   const onLongPressMinus = () => {
-    console.log("longpress minus is triggered");
+    var time = 200;
+
+    const request = () => {
+      clearInterval(interval.current);
+      setSpeed((prev) => {
+        return prev > 1 ? parseInt(prev) - 1 : prev;
+      });
+      time = time * 0.95 < 40 ? 40 : time * 0.95;
+      interval.current = setInterval(request, time);
+    };
+
+    interval.current = setInterval(request, time);
   };
 
   const onClickMinus = () => {
-    console.log("click minus is triggered");
+    setSpeed((prev) => parseInt(prev) - 1);
   };
 
   const defaultOptions = {
@@ -39,12 +62,14 @@ const Speed = () => {
   const longPressEventPlus = useLongPress(
     onLongPressPlus,
     onClickPlus,
+    onLongPressLeave,
     defaultOptions
   );
 
   const longPressEventMinus = useLongPress(
     onLongPressMinus,
     onClickMinus,
+    onLongPressLeave,
     defaultOptions
   );
   return (
@@ -58,9 +83,9 @@ const Speed = () => {
           <input
             type="range"
             min="20"
-            max="300"
+            max="260"
             onChange={changeHandler}
-            defaultValue={speed}
+            value={speed}
           />
         </div>
         <div className="plus" {...longPressEventPlus}>
