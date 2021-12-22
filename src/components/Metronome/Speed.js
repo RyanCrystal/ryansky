@@ -4,8 +4,12 @@ import { useState, useRef } from "react";
 import useLongPress from "../../tools/useLongPress";
 import "./Speed.css";
 
+import "./Rhythm";
+import Rhythm from "./Rhythm";
+
 const Speed = () => {
   const [speed, setSpeed] = useState(60);
+  const [isLongPressing, setIsLongPressing] = useState(false);
   const interval = useRef();
 
   const changeHandler = (e) => {
@@ -13,15 +17,15 @@ const Speed = () => {
   };
 
   const onLongPressPlus = () => {
+    setIsLongPressing(true);
     var time = 200;
 
     const request = () => {
       clearInterval(interval.current);
       setSpeed((prev) => {
-        return prev < 300 ? parseInt(prev) + 1 : prev;
+        return prev < 260 ? parseInt(prev) + 1 : prev;
       });
       time = time * 0.95 < 40 ? 40 : time * 0.95;
-      console.log(time);
       interval.current = setInterval(request, time);
     };
 
@@ -29,14 +33,20 @@ const Speed = () => {
   };
 
   const onClickPlus = () => {
-    setSpeed((prev) => parseInt(prev) + 1);
+    setSpeed((prev) => {
+      return prev < 260 ? parseInt(prev) + 1 : prev;
+    });
   };
 
   const onLongPressLeave = () => {
+    setIsLongPressing(false);
+
     clearInterval(interval.current);
   };
 
   const onLongPressMinus = () => {
+    setIsLongPressing(true);
+
     var time = 200;
 
     const request = () => {
@@ -57,7 +67,7 @@ const Speed = () => {
 
   const defaultOptions = {
     shouldPreventDefault: true,
-    delay: 500,
+    delay: 200,
   };
   const longPressEventPlus = useLongPress(
     onLongPressPlus,
@@ -74,7 +84,7 @@ const Speed = () => {
   );
   return (
     <div className="text-center">
-      <h1>{speed}</h1>
+      <div className="speed">{speed}</div>
       <div className="speedometer">
         <div className="minus" {...longPressEventMinus}>
           <span>-</span>
@@ -92,6 +102,7 @@ const Speed = () => {
           <span>+</span>
         </div>
       </div>
+      <Rhythm speed={speed} isLongPressing={isLongPressing} />
     </div>
   );
 };
