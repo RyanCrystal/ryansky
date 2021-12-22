@@ -1,16 +1,22 @@
 import React from "react";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import useLongPress from "../../tools/useLongPress";
+import Rhythm from "./Rhythm";
+import ImageMove from "./ImageMove";
+
 import "./Speed.css";
 
-import "./Rhythm";
-import Rhythm from "./Rhythm";
-
 const Speed = () => {
-  const [speed, setSpeed] = useState(60);
+  const [speed, setSpeed] = useState(90);
   const [isLongPressing, setIsLongPressing] = useState(false);
   const interval = useRef();
+  const imageMoveRef = useRef();
+  const [imageNode, setImageNode] = useState(null);
+
+  useEffect(() => {
+    setImageNode(imageMoveRef.current);
+  }, []);
 
   const changeHandler = (e) => {
     setSpeed((prev) => parseInt(e.target.value));
@@ -83,26 +89,33 @@ const Speed = () => {
     defaultOptions
   );
   return (
-    <div className="text-center">
-      <div className="speed">{speed}</div>
-      <div className="speedometer">
-        <div className="minus" {...longPressEventMinus}>
-          <span>-</span>
+    <div className="container">
+      <div className="image-container" ref={imageMoveRef}></div>
+      <div className="metronome-container">
+        <div className="speed">{speed}</div>
+        <div className="speedometer">
+          <div className="minus" {...longPressEventMinus}>
+            <span>-</span>
+          </div>
+          <div className="speedometer-bar">
+            <input
+              type="range"
+              min="20"
+              max="260"
+              onChange={changeHandler}
+              value={speed}
+            />
+          </div>
+          <div className="plus" {...longPressEventPlus}>
+            <span>+</span>
+          </div>
         </div>
-        <div className="speedometer-bar">
-          <input
-            type="range"
-            min="20"
-            max="260"
-            onChange={changeHandler}
-            value={speed}
-          />
-        </div>
-        <div className="plus" {...longPressEventPlus}>
-          <span>+</span>
-        </div>
+        <Rhythm
+          speed={speed}
+          isLongPressing={isLongPressing}
+          node={imageNode}
+        />
       </div>
-      <Rhythm speed={speed} isLongPressing={isLongPressing} />
     </div>
   );
 };

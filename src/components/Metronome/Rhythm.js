@@ -1,5 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import BufferLoader from "./Helper/function";
+
+import IconList from "./IconList";
+import ImageMove from "./ImageMove";
 import "./Rhythm.css";
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
 const context = new AudioContext();
@@ -13,11 +16,22 @@ const Rhythm = (props) => {
   const speed = props.speed;
   const isLongPressing = props.isLongPressing;
   const [isPlaying, setIsPlaying] = useState(false);
-  // const [reached, setReached] = useState(true);
   const reached = useRef(true);
+  const interval = useRef();
+  const timeout = useRef();
   const [index, setIndex] = useState(-1);
-  const [beat, setBeat] = useState(2);
+  const [beat, setBeat] = useState(4);
   const [stressFirstBeat, setStressFirstBeat] = useState(false);
+  const beatRange = [2, 3, 4, 5, 6];
+
+  if (!props.node) {
+    document.addEventListener("keyup", (e) => {
+      if (e.key === " ") {
+        onClickHandler();
+        console.log(e.key);
+      }
+    });
+  }
 
   useEffect(() => {
     if (isPlaying) {
@@ -27,9 +41,6 @@ const Rhythm = (props) => {
       clearTimeout(timeout.current);
     }
   }, [speed, isPlaying, isLongPressing, index]);
-
-  const interval = useRef();
-  const timeout = useRef();
 
   const playMetronome = () => {
     var bufferLoader = new BufferLoader(context, [r2, r], finishedLoading);
@@ -71,10 +82,10 @@ const Rhythm = (props) => {
     source2.connect(context.destination);
     // source2.start(0);
 
-    setIndex((prev) => (prev + 1) % 4);
+    setIndex((prev) => (prev + 1) % beat);
     console.log(stressFirstBeat);
     console.log(index);
-    if (stressFirstBeat && index == 3) {
+    if (stressFirstBeat && index == beat - 1) {
       console.log("play accent");
       source2.start(0);
     } else {
@@ -90,37 +101,45 @@ const Rhythm = (props) => {
     setStressFirstBeat((prev) => !prev);
   };
 
+  const onDecreaseBeatHandler = () => {
+    setBeat((prev) => (beatRange.includes(prev - 1) ? prev - 1 : prev));
+  };
+
+  const onIncreaseBeatHandler = () => {
+    setBeat((prev) => (beatRange.includes(prev + 1) ? prev + 1 : prev));
+  };
   return (
     <div>
+      <ImageMove index={index} beat={beat} node={props.node} />
       <div className="metronome-icons">
-        <div className={`icon ${index == 0 ? "active" : ""}`}></div>
-        <div className={`icon ${index == 1 ? "active" : ""}`}></div>
-        <div className={`icon ${index == 2 ? "active" : ""}`}></div>
-        <div className={`icon ${index == 3 ? "active" : ""}`}></div>
+        <IconList beat={beat} index={index} />
       </div>
       <div className="play-btn" onClick={onClickHandler}>
-        <span className={`button ${isPlaying ? "" : "pause"}`}>
-          {isPlaying ? "Pause" : "Play"}
-        </span>
+        <button className={`button ${isPlaying ? "paused" : ""}`}></button>
       </div>
-      <div>
-        <label>
-          <input
-            type="checkbox"
-            checked={stressFirstBeat}
-            onChange={handleStressChange}
-          />
-          My Value
-          {stressFirstBeat.toString()}
-        </label>
-      </div>
-      <div className="beat-container">
-        <div className="small-minus">
-          <span>-</span>
+      <hr />
+      <div className="tools-container">
+        <div className="first-beat-checkbox">
+          <label>
+            Stress First Beat
+            <br />
+            第一拍重拍
+            <input
+              type="checkbox"
+              checked={stressFirstBeat}
+              onChange={handleStressChange}
+            />
+            <span className="checkmark"></span>
+          </label>
         </div>
-        <div>{beat}</div>
-        <div className="small-plus">
-          <span>-</span>
+        <div className="beat-container">
+          <div className="small-minus" onClick={onDecreaseBeatHandler}>
+            <span>-</span>
+          </div>
+          <div className="beat">{beat}</div>
+          <div className="small-plus" onClick={onIncreaseBeatHandler}>
+            <span>+</span>
+          </div>
         </div>
       </div>
     </div>
