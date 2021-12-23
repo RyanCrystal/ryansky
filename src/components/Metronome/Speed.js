@@ -43,7 +43,7 @@ const Speed = () => {
       return prev < 260 ? parseInt(prev) + 1 : prev;
     });
   };
-  console.log("speed");
+  // console.log("speed");
 
   const onLongPressLeave = () => {
     setIsLongPressing(false);
@@ -90,7 +90,7 @@ const Speed = () => {
     defaultOptions
   );
   return (
-    <div className="container">
+    <div className="speed-container container">
       <div className="image-container" ref={imageMoveRef}></div>
       <div className="metronome-container">
         <div className="speed">{speed}</div>

@@ -27,8 +27,8 @@ const Rhythm = (props) => {
   if (!props.node) {
     document.addEventListener("keyup", (e) => {
       if (e.key === " ") {
-        onClickHandler();
-        console.log(e.key);
+        onClickHandler(e);
+        console.log("document space triggered");
       }
     });
   }
@@ -52,7 +52,6 @@ const Rhythm = (props) => {
     clearInterval(interval.current);
     interval.current = setInterval(() => {
       play(bufferList);
-      console.log("interval");
     }, 60000 / speed);
 
     if (isLongPressing && reached.current) {
@@ -65,8 +64,6 @@ const Rhythm = (props) => {
 
     if (!isLongPressing) {
       clearTimeout(timeout.current);
-
-      console.log("clear timeout");
       reached.current = true;
     }
   };
@@ -83,17 +80,20 @@ const Rhythm = (props) => {
     // source2.start(0);
 
     setIndex((prev) => (prev + 1) % beat);
-    console.log(stressFirstBeat);
-    console.log(index % beat);
+    // console.log(stressFirstBeat);
+    // console.log(index % beat);
     if (stressFirstBeat && (index + beat) % beat == beat - 1) {
-      console.log("play accent");
       source2.start(0);
     } else {
       source1.start(0);
     }
   };
 
-  const onClickHandler = () => {
+  const onClickHandler = (e) => {
+    if (e.key == " ") {
+      e.preventDefault();
+    }
+    console.log("click triggered");
     setIsPlaying((prev) => !prev);
   };
 

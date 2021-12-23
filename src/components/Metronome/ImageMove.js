@@ -22,7 +22,7 @@ const ImageMove = (props) => {
   if (beat == 3 && index == 1) {
     activeBeat3 = true;
   }
-  console.log(props.node);
+  // console.log(props.node);
   if (!props.node) {
     return null;
   }
