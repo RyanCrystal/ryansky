@@ -71,6 +71,7 @@
 .small-plus {
   font-weight: 800;
   font-size: 27px;
+  line-height: 27px;
 }
 hr {
   margin: 30px 0 30px 0;
@@ -107,7 +108,7 @@ hr {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
+  background-color: #c7baba;
 }
 
 /* On mouse-over, add a grey background color */
