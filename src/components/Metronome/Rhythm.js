@@ -84,8 +84,8 @@ const Rhythm = (props) => {
 
     setIndex((prev) => (prev + 1) % beat);
     console.log(stressFirstBeat);
-    console.log(index);
-    if (stressFirstBeat && index == beat - 1) {
+    console.log(index % beat);
+    if (stressFirstBeat && (index + beat) % beat == beat - 1) {
       console.log("play accent");
       source2.start(0);
     } else {
@@ -97,7 +97,12 @@ const Rhythm = (props) => {
     setIsPlaying((prev) => !prev);
   };
 
-  const handleStressChange = () => {
+  const handleStressChange = (e) => {
+    if (e.key === " ") {
+      e.preventDefault();
+
+      return;
+    }
     setStressFirstBeat((prev) => !prev);
   };
 
@@ -128,6 +133,7 @@ const Rhythm = (props) => {
               type="checkbox"
               checked={stressFirstBeat}
               onChange={handleStressChange}
+              onKeyUp={handleStressChange}
             />
             <span className="checkmark"></span>
           </label>

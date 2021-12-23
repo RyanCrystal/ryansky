@@ -43,6 +43,7 @@ const Speed = () => {
       return prev < 260 ? parseInt(prev) + 1 : prev;
     });
   };
+  console.log("speed");
 
   const onLongPressLeave = () => {
     setIsLongPressing(false);

@@ -95,7 +95,7 @@ hr {
   border-style: double;
   border-width: 0px 0 0px 25px;
   position: relative;
-  left: 7px;
+  left: 6px;
 }
 .button:hover {
   border-color: transparent transparent transparent #e77a4f;
