@@ -1,0 +1,12 @@
+.step-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.measures-numbers input,
+.tempo input {
+  width: 100px;
+}
+.add-step-btn {
+  height: 20px;
+}
