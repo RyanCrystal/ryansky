@@ -12,7 +12,10 @@ const CustomMetronome = () => {
   return (
     <div className="container">
       <h1>Customize Metronome</h1>
-      <Steps stepNumber={stepNumber} addStep={addStep} />
+      <button className="add-step-btn" onClick={addStep}>
+        Add Step
+      </button>
+      <Steps stepNumber={stepNumber} />
     </div>
   );
 };

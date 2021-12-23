@@ -3,7 +3,7 @@ import React from "react";
 const Step = (props) => {
   return (
     <div className="step-container">
-      <h4>Step 1</h4>
+      <h4>Step {props.index}</h4>
       <div className="time-signature">
         <div>Time signature</div>
         <select>
@@ -14,19 +14,16 @@ const Step = (props) => {
       </div>
       <div className="measures-numbers">
         <div>Measure numbers</div>
-        <input type="number" />
+        <input type="number" value="3" />
       </div>
       <div className="tempo">
         <div>Tempo</div>
-        <input type="number" />
+        <input type="number" value="110" />
       </div>
       <div className="accent">
         <div>Stress First Beat</div>
         <input type="checkbox" />
       </div>
-      <button className="add-step-btn" onClick={props.addStep}>
-        Add Step
-      </button>
     </div>
   );
 };

@@ -6,7 +6,7 @@ import "./Steps.css";
 
 const Steps = (props) => {
   const n = [...Array(props.stepNumber + 1).keys()].slice(1);
-  return n.map((m) => <Step key={m} addStep={props.addStep} />);
+  return n.map((m) => <Step key={m} index={m} />);
 };
 
 export default Steps;
