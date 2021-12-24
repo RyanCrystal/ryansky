@@ -1,9 +1,8 @@
 import React from "react";
 import { useState, useRef, useEffect } from "react";
 
-import useLongPress from "../../tools/useLongPress";
+import useLongPress from "../../hooks/useLongPress";
 import Rhythm from "./Rhythm";
-import ImageMove from "./ImageMove";
 
 import "./Speed.css";
 
@@ -74,7 +73,7 @@ const Speed = () => {
 
   const defaultOptions = {
     shouldPreventDefault: true,
-    delay: 200,
+    delay: 200
   };
   const longPressEventPlus = useLongPress(
     onLongPressPlus,
