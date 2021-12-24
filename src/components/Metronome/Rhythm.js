@@ -1,27 +1,24 @@
 import React, { useState, useRef, useEffect } from "react";
-import BufferLoader from "./Helper/function";
+import BufferLoader from "../../Helper/function";
 
 import IconList from "./IconList";
 import ImageMove from "./ImageMove";
-import Sounds from "./Helper/Sounds";
+import Sounds from "../../Helper/Sounds";
 import "./Rhythm.css";
-window.AudioContext = window.AudioContext || window.webkitAudioContext;
-const context = new AudioContext();
-let r, r2;
-({ r, r2 } = Sounds());
 
 const Rhythm = (props) => {
   const speed = props.speed;
   const isLongPressing = props.isLongPressing;
   const [isPlaying, setIsPlaying] = useState(false);
   const reached = useRef(true);
-  const interval = useRef();
   const timeout = useRef();
+  const interval = useRef();
   const [index, setIndex] = useState(-1);
   const [beat, setBeat] = useState(4);
   const [stressFirstBeat, setStressFirstBeat] = useState(true);
   const beatRange = [2, 3, 4, 5, 6];
   const bufferLoader = useRef();
+  const context = useRef();
 
   if (!props.node) {
     document.addEventListener("keyup", (e) => {
@@ -34,7 +31,7 @@ const Rhythm = (props) => {
 
   useEffect(() => {
     if (isPlaying) {
-      finishedLoading(bufferLoader.current.bufferList);
+      playBufferList(bufferLoader.current.bufferList);
     } else {
       clearInterval(interval.current);
       clearTimeout(timeout.current);
@@ -46,11 +43,20 @@ const Rhythm = (props) => {
   }, []);
 
   const init = () => {
-    bufferLoader.current = new BufferLoader(context, [r2, r], finishedLoading);
+    window.AudioContext = window.AudioContext || window.webkitAudioContext;
+    context.current = new AudioContext();
+    let r, r2;
+    ({ r, r2 } = Sounds());
+
+    bufferLoader.current = new BufferLoader(
+      context.current,
+      [r2, r],
+      playBufferList
+    );
     bufferLoader.current.load();
   };
 
-  const finishedLoading = (bufferList) => {
+  const playBufferList = (bufferList) => {
     clearInterval(interval.current);
     if (index != -1 || isPlaying) {
       interval.current = setInterval(() => {
@@ -74,14 +80,14 @@ const Rhythm = (props) => {
   };
 
   const play = (bufferList) => {
-    var source1 = context.createBufferSource();
+    var source1 = context.current.createBufferSource();
     source1.buffer = bufferList[0];
-    source1.connect(context.destination);
+    source1.connect(context.current.destination);
     // source1.start(0);
 
-    var source2 = context.createBufferSource(); // accent
+    var source2 = context.current.createBufferSource(); // accent
     source2.buffer = bufferList[1];
-    source2.connect(context.destination);
+    source2.connect(context.current.destination);
     // source2.start(0);
 
     setIndex((prev) => (prev + 1) % beat);
@@ -120,9 +126,9 @@ const Rhythm = (props) => {
   return (
     <div>
       <ImageMove index={index} beat={beat} node={props.node} />
-      <div className="metronome-icons">
-        <IconList beat={beat} index={index} />
-      </div>
+
+      <IconList beat={beat} index={index} />
+
       <div className="play-btn" onClick={onClickHandler}>
         <button className={`button ${isPlaying ? "paused" : ""}`}></button>
       </div>
