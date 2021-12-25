@@ -33,6 +33,9 @@ const stepsTotalDataReducer = (state, action) => {
       newState.stepsData.splice(action.data.index, 1);
 
       break;
+    case "changeBeatCount":
+      newState = { ...state };
+      newState.beatCount = newState.beatCount + 1;
     default:
       break;
   }
@@ -41,7 +44,6 @@ const stepsTotalDataReducer = (state, action) => {
 
 const CustomMetronome = () => {
   const [stepsTotalData, dispatch] = useReducer(stepsTotalDataReducer, {
-    stepNumber: 1,
     stepsData: [
       {
         timeSignature: "4/4",
@@ -49,16 +51,17 @@ const CustomMetronome = () => {
         tempo: 110,
         stressFirstBeat: true
       }
-    ]
+    ],
+    currentStepIndex: 0,
+    beatCount: -1
   });
 
   const bufferLoader = useRef();
   const interval = useRef();
-  let beatCount = useRef();
-  let beat = useRef();
-  let speed = useRef();
+  // let beatCount = useRef();
+  // let beat = useRef();
+  // let speed = useRef();
   const context = useRef();
-  let stressFirstBeat = useRef();
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
@@ -85,23 +88,14 @@ const CustomMetronome = () => {
       playBufferList
     );
     bufferLoader.current.load();
-    beatCount.current =
-      stepsTotalData.stepsData[0].measureNumber *
-      parseInt(stepsTotalData.stepsData[0].timeSignature[0]);
-    beat.current = parseInt(stepsTotalData.stepsData[0].timeSignature[0]);
-    speed.current = stepsTotalData.stepsData[0].tempo;
-    stressFirstBeat.current = stepsTotalData.stepsData[0].stressFirstBeat;
-    console.log(beat.current);
   };
 
   const playBufferList = (bufferList) => {
     clearInterval(interval.current);
-    if (beatCount.current != -1 || isPlaying) {
+    if (stepsTotalData.beatCount != -1 || isPlaying) {
       interval.current = setInterval(() => {
         play(bufferList);
-        console.log(beat.current);
-        console.log(beatCount.current);
-      }, 60000 / speed.current);
+      }, 60000 / stepsTotalData.currentStep.tempo);
     }
   };
 
@@ -114,12 +108,16 @@ const CustomMetronome = () => {
     source2.buffer = bufferList[1];
     source2.connect(context.current.destination);
 
-    // setIndex((prev) => (prev + 1) % beat);
-    beatCount.current = (beatCount.current + 1) % beat.current;
+    // stepsTotalData.beatCount = (stepsTotalData.beatCount + 1) %stepsTotalData.currentStep.beat;
+    dispatch({
+      type: "changeBeatCount"
+    });
 
     if (
-      stressFirstBeat.current &&
-      (beatCount.current + beat.current) % beat.current == beat.current - 1
+      stepsTotalData.currentStep.stressFirstBeat &&
+      (stepsTotalData.beatCount + stepsTotalData.currentStep.beat) %
+        stepsTotalData.currentStep.beat ==
+        stepsTotalData.currentStep.beat - 1
     ) {
       source2.start(0);
     } else {
@@ -168,7 +166,10 @@ const CustomMetronome = () => {
         changeStepsData={changeStepsData}
         deleteStep={deleteStep}
       />
-      <IconList beat={beat.current} index={beatCount.current} />
+      <IconList
+        beat={stepsTotalData.currentStep.beat}
+        index={stepsTotalData.beatCount}
+      />
 
       <div className="action-btns">
         <button onClick={playCustomMetronome}>Play</button>
