@@ -7,6 +7,20 @@ import Sounds from "../../Helper/Sounds";
 import IconList from "../Metronome/IconList";
 import BufferLoader from "../../Helper/function";
 
+const initState = {
+  stepsData: [
+    {
+      timeSignature: "4/4",
+      measureNumber: 4,
+      tempo: 110,
+      stressFirstBeat: true,
+      beat: 4
+    }
+  ],
+  currentStepIndex: 0,
+  beatCount: -1,
+  currentStepCount: -1
+};
 const stepsTotalDataReducer = (state, action) => {
   let newState;
   switch (action.type) {
@@ -19,9 +33,7 @@ const stepsTotalDataReducer = (state, action) => {
       if (field == "timeSignature") {
         newState.stepsData[index]["beat"] = parseInt(value[0]);
       }
-      console.log(action);
-      console.log(value);
-      console.log(newState);
+
       break;
     case "add_step":
       newState = { ...state };
@@ -41,12 +53,29 @@ const stepsTotalDataReducer = (state, action) => {
     case "changeBeatCount":
       newState = { ...state };
       newState.beatCount = newState.beatCount + 1;
+      newState.currentStepCount = newState.currentStepCount + 1;
       break;
     case "playNextStep":
       newState = { ...state };
       newState.currentStepIndex = newState.currentStepIndex + 1;
-      console.log(newState);
+      newState.currentStepCount = -1;
       break;
+    case "reset":
+      newState = {
+        stepsData: [
+          {
+            timeSignature: "4/4",
+            measureNumber: 4,
+            tempo: 110,
+            stressFirstBeat: true,
+            beat: 4
+          }
+        ],
+        currentStepIndex: 0,
+        beatCount: -1,
+        currentStepCount: -1
+      };
+
     default:
       break;
   }
@@ -54,19 +83,10 @@ const stepsTotalDataReducer = (state, action) => {
 };
 
 const CustomMetronome = () => {
-  const [stepsTotalData, dispatch] = useReducer(stepsTotalDataReducer, {
-    stepsData: [
-      {
-        timeSignature: "4/4",
-        measureNumber: 4,
-        tempo: 110,
-        stressFirstBeat: true,
-        beat: 4
-      }
-    ],
-    currentStepIndex: 0,
-    beatCount: -1
-  });
+  const [stepsTotalData, dispatch] = useReducer(
+    stepsTotalDataReducer,
+    initState
+  );
 
   const bufferLoader = useRef();
   const interval = useRef();
@@ -127,7 +147,7 @@ const CustomMetronome = () => {
     if (
       stepsTotalData.stepsData[stepsTotalData.currentStepIndex]
         .stressFirstBeat &&
-      (stepsTotalData.beatCount +
+      (stepsTotalData.currentStepCount +
         stepsTotalData.stepsData[stepsTotalData.currentStepIndex].beat) %
         stepsTotalData.stepsData[stepsTotalData.currentStepIndex].beat ==
         stepsTotalData.stepsData[stepsTotalData.currentStepIndex].beat - 1
@@ -136,11 +156,7 @@ const CustomMetronome = () => {
     } else {
       source1.start(0);
     }
-    console.log(stepsTotalData.beatCount);
-    console.log(stepsTotalData.stepsData[stepsTotalData.currentStepIndex].beat);
-    console.log(
-      stepsTotalData.stepsData[stepsTotalData.currentStepIndex].measureNumber
-    );
+
     dispatch({
       type: "changeBeatCount"
     });
@@ -189,10 +205,16 @@ const CustomMetronome = () => {
     setIsPlaying((prev) => !prev);
   };
 
+  const resetCustomMetronome = () => {
+    dispatch({
+      type: "reset"
+    });
+  };
+
   return (
     <div className="container">
       <h1>Customize Metronome</h1>
-      <button className="add-step-btn" onClick={addStep}>
+      <button className="add-step-btn button-3" onClick={addStep}>
         Add Step
       </button>
       <Steps
@@ -203,14 +225,21 @@ const CustomMetronome = () => {
       <IconList
         beat={stepsTotalData.stepsData[stepsTotalData.currentStepIndex].beat}
         index={
-          stepsTotalData.beatCount %
+          stepsTotalData.currentStepCount %
           stepsTotalData.stepsData[stepsTotalData.currentStepIndex].beat
         }
       />
 
       <div className="action-btns">
-        <button onClick={playCustomMetronome}>
+        <button onClick={playCustomMetronome} className="play-cus-btn button-1">
           {isPlaying ? "Pause" : "Play"}
+        </button>
+        <button
+          onClick={resetCustomMetronome}
+          disabled={isPlaying}
+          className="button-1"
+        >
+          Reset
         </button>
       </div>
     </div>

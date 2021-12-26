@@ -60,7 +60,6 @@ const Rhythm = (props) => {
     clearInterval(interval.current);
     if (index != -1 || isPlaying) {
       interval.current = setInterval(() => {
-        console.log("test");
         play(bufferList);
       }, 60000 / speed);
     }
