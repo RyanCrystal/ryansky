@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "js-beautify": "^1.14.0",
-    "walk": "^2.3.15"
-  }
-}
