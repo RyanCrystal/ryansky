@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev -- -p 3001",
-    "build": "next build -- -p 3001 && npm start ",
+    "build": "next build -- -p 3001",
     "start": "next start  -- -p 3001",
     "lint": "next lint"
   },
-  
+
   "dependencies": {
     "next": "12.0.9",
     "react": "17.0.2",
