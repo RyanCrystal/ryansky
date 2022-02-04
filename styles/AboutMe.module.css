@@ -1,0 +1,37 @@
+#about h1 {
+  text-align: center;
+  color: #000;
+  font-size: 3rem;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+.about_content {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.about_content .about_content_left {
+  display: flex;
+  justify-content: space-evenly;
+}
+.about_content .about_content_left .img_container {
+  background: url("../public/img/sky1.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: 200px;
+  padding: 0;
+  border-radius: 50%;
+  min-width: 200px;
+  margin-right: 20px;
+}
+.about_content .intro_text {
+  align-self: center;
+}
+.about_content .intro_text p {
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
+  color: #000;
+}
+.about_content .intro_text p::first-letter {
+  color: blue;
+  font-size: 1.3rem;
+}
