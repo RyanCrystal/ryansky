@@ -10,7 +10,6 @@ const ImageMove = (props) => {
   if (!props.node) {
     return null;
   }
-
   const clickHideBatonHandler = () => {
     setHideBaton((prev) => !prev);
   };
