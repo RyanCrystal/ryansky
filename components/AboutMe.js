@@ -9,8 +9,8 @@ const AboutMe = () => {
           <div className={styles.img_container}></div>
           <div className={styles.intro_text}>
             <p>
-              With great passion in web development,I've been teaching myself
-              all along.
+              With great passion in web development,I&apos;ve been teaching
+              myself all along.
               <br />
               My focus right now is <strong>JavaScript</strong> and
               <strong> PHP</strong>.

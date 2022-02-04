@@ -6,13 +6,14 @@ export function ProjectItem({ project }) {
   return (
     <div className={styles.project_item}>
       <div className={styles.project_image_container}>
-        <a href={project.link} target="_blank">
+        <a href={project.link} target="_blank" rel="noreferrer">
           <img src={project.image_src} alt="" />
         </a>
       </div>
       <a
         href={project.link}
         target="_blank"
+        rel="noreferrer"
         className={styles.project_item_btn}
       >
         View

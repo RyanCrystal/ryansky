@@ -6,10 +6,10 @@ import img from "../../../public/img/projects/conductor-stick.png";
 // import "./ImageMove.css";
 
 const ImageMove = (props) => {
+  const [hideBaton, setHideBaton] = useState(false);
   if (!props.node) {
     return null;
   }
-  const [hideBaton, setHideBaton] = useState(false);
   const clickHideBatonHandler = () => {
     setHideBaton((prev) => !prev);
   };
