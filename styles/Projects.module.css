@@ -32,7 +32,7 @@
 }
 .projects_items .project_item img:hover {
   transition: all 0.5s ease-out;
-  border: 5px solid rgb(243, 24, 24);
+  /* border: 5px solid rgb(243, 24, 24); */
 }
 .projects_items .project_item .project_text {
   opacity: 0;
