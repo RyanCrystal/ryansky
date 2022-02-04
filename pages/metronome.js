@@ -1,5 +1,5 @@
-import Metro from "../components/metronome/Metronome";
+// import Metro from "../components/metronome/Metronome";
 
-export default function MetroDemo() {
-  return <Metro />;
-}
+// export default function MetroDemo() {
+//   return <Metro />;
+// }
