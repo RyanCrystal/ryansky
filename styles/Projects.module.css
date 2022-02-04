@@ -19,7 +19,7 @@
 }
 .projects_items {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   padding: 3rem;
   place-items: center;
   -webkit-column-gap: 2rem;
@@ -89,7 +89,7 @@
   z-index: 5;
 }
 .projects_items .project_item:hover {
-  border: 1px solid #6fa3d1;
+  /* border: 1px solid #6fa3d1; */
 }
 .projects_items .project_item:hover .project_text {
   opacity: 1;
@@ -100,7 +100,7 @@
   opacity: 1;
 }
 .projects_items .project_item:hover img {
-  opacity: 0;
+  opacity: 0.3;
 }
 .projects_items img {
   width: 100%;
