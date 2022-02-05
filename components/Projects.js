@@ -26,7 +26,6 @@ const projects = [
     title: "Real-Time Chat Application",
     tech: "ReactJs, Socket.io",
     link: "/",
-
     github_link: "/"
   }
 ];
