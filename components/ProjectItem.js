@@ -8,7 +8,7 @@ export function ProjectItem({ project }) {
     <div className={styles.project_item}>
       <div className={styles.project_image_container}>
         <a href={project.link} target="_blank" rel="noreferrer">
-          <Image src={project.image_src} alt="" />
+          <img src={project.image_src} layout="fill" alt="" />
         </a>
       </div>
       <a

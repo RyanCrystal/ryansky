@@ -2,11 +2,15 @@ import styles from "../styles/Projects.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { ProjectItem } from "./ProjectItem";
+// import Image from "next/image";
+// import project1_image from "../public/img/projects/project1.jpg";
+// import project2_image from "../public/img/projects/project2.jpg";
+// import project3_image from "../public/img/projects/project3.jpg";
 
 const projects = [
   {
     id: 1,
-    image_src: "../img/projects/project1.jpg",
+    image_src: "/img/projects/project1.jpg",
     title: "Customized metronome",
     tech: "ReactJs",
     link: "/metronome",
@@ -14,15 +18,15 @@ const projects = [
   },
   {
     id: 2,
-    image_src: "../img/projects/project2.jpg",
+    image_src: "/img/projects/project2.jpg",
     title: "Real-Time Chat Application",
-    tech: "ReactJs, Socket.io",
+    tech: "Socket.io",
     link: "https://chat.ryansky.org",
     github_link: "/"
   },
   {
     id: 3,
-    image_src: "../img/projects/project3.jpg",
+    image_src: "/img/projects/project3.jpg",
     title: "Real-Time Chat Application",
     tech: "ReactJs, Socket.io",
     link: "/",
