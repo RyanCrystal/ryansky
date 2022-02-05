@@ -1,8 +1,3 @@
-.mode {
-  text-align: center;
-  display: flex;
-}
-
 /* CSS */
 .button-3 {
   appearance: none;
@@ -89,7 +84,4 @@
 .button-1:hover,
 .button-1:focus {
   background-color: #f082ac;
-}
-body {
-  background-color: #6fa3d1;
 }

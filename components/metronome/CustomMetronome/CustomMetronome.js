@@ -32,7 +32,7 @@ const stepsTotalDataReducer = (state, action) => {
   let newState;
   switch (action.type) {
     case "change":
-      newState = { ...state };
+      newState = JSON.parse(JSON.stringify(state));
       let index = action.data.index;
       let field = action.data.field;
       let value = action.data.value;
@@ -43,7 +43,8 @@ const stepsTotalDataReducer = (state, action) => {
 
       break;
     case "add_step":
-      newState = { ...state };
+      console.log("add_step");
+      newState = JSON.parse(JSON.stringify(state));
 
       newState.stepsData.push({
         timeSignature: "4/4",
@@ -52,36 +53,24 @@ const stepsTotalDataReducer = (state, action) => {
         stressFirstBeat: true,
         beat: 4
       });
+      console.log(newState);
       break;
     case "delete_step":
-      newState = { ...state };
+      newState = JSON.parse(JSON.stringify(state));
       newState.stepsData.splice(action.data.index, 1);
       break;
     case "changeBeatCount":
-      newState = { ...state };
+      newState = JSON.parse(JSON.stringify(state));
       newState.beatCount = newState.beatCount + 1;
       newState.currentStepCount = newState.currentStepCount + 1;
       break;
     case "playNextStep":
-      newState = { ...state };
+      newState = JSON.parse(JSON.stringify(state));
       newState.currentStepIndex = newState.currentStepIndex + 1;
       newState.currentStepCount = -1;
       break;
     case "reset":
-      newState = {
-        stepsData: [
-          {
-            timeSignature: "4/4",
-            measureNumber: 4,
-            tempo: 110,
-            stressFirstBeat: true,
-            beat: 4
-          }
-        ],
-        currentStepIndex: 0,
-        beatCount: -1,
-        currentStepCount: -1
-      };
+      newState = { ...initState };
 
     default:
       break;
@@ -111,6 +100,12 @@ const CustomMetronome = () => {
 
   useEffect(() => {
     init();
+  }, []);
+  useEffect(() => {
+    return () => {
+      clearInterval(interval.current);
+      resetCustomMetronome();
+    };
   }, []);
 
   const init = () => {
@@ -219,7 +214,7 @@ const CustomMetronome = () => {
   };
 
   return (
-    <div className="container">
+    <div className="metronome_container">
       <h1>Customize Metronome</h1>
       <button className="add-step-btn button-3" onClick={addStep}>
         Add Step

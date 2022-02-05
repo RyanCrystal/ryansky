@@ -9,7 +9,7 @@ const projects = [
     image_src: "../img/projects/project1.jpg",
     title: "Customized metronome",
     tech: "ReactJs",
-    link: "/",
+    link: "/metronome",
     github_link: "/"
   },
   {

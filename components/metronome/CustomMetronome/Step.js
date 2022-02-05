@@ -34,6 +34,7 @@ const Step = (props) => {
       <div className="time-signature">
         <div>Time signature</div>
         <select
+          className="form-control"
           value={props.stepData.timeSignature}
           onChange={onChangeTimeSignature}
         >
@@ -46,6 +47,7 @@ const Step = (props) => {
         <div>Measure numbers</div>
         <input
           type="number"
+          className="form-control"
           value={props.stepData.measureNumber}
           onChange={onChangeMeasureHandler}
           min="4"
@@ -56,6 +58,7 @@ const Step = (props) => {
         <div>Tempo</div>
         <input
           type="number"
+          className="form-control"
           value={props.stepData.tempo}
           onChange={onChangeTempoHandler}
           min="60"
@@ -66,13 +69,14 @@ const Step = (props) => {
         <div>Stress First Beat</div>
         <input
           type="checkbox"
+          className="form-control"
           checked={props.stepData.stressFirstBeat}
           onChange={onChangeSressFirstBeat}
         />
       </div>
       {index > 1 && (
         <div className="delete-step-btn" onClick={onDeleteStepHandler}>
-          <button>Delete</button>
+          <button className="button-3 button-delete">Delete</button>
         </div>
       )}
     </div>

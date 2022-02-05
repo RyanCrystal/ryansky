@@ -35,7 +35,7 @@ h3 {
 
 body {
   background: #222121;
-  color: #fff;
+  /* color: #fff; */
   height: 100vh;
   line-height: 1.5;
   overflow-x: hidden;
@@ -231,7 +231,7 @@ main h1 {
 }
 .delete-step-btn {
   position: absolute;
-  right: -56px;
+  right: -70px;
 }
 .step-container {
   display: flex;
@@ -241,18 +241,50 @@ main h1 {
 }
 .add-step-btn {
   height: 35px;
+  right: 11px;
+  position: absolute;
+  top: 14px;
 }
 .measures-numbers input,
 .tempo input {
   width: 100px;
 }
-
-.mode {
+.button-delete {
+  background-color: #d33333 !important;
+}
+input.form-control,
+select.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.1rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.metronome_mode {
   text-align: center;
   display: flex;
 }
+.metronome_container {
+  max-width: 647px;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: space-around;
+  margin-top: 30px;
+  position: relative;
+}
 
 /* CSS */
+.button-3.active {
+  background-color: darkblue !important;
+  color: #c9dfc9;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.48);
+}
 .button-3 {
   appearance: none;
   background-color: #2ea44f;
@@ -269,7 +301,6 @@ main h1 {
   font-weight: 600;
   line-height: 20px;
   padding: 6px 16px;
-  position: relative;
   text-align: center;
   text-decoration: none;
   user-select: none;
@@ -277,6 +308,7 @@ main h1 {
   touch-action: manipulation;
   vertical-align: middle;
   white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .button-3:focus:not(:focus-visible):not(.focus-visible) {
@@ -284,9 +316,9 @@ main h1 {
   outline: none;
 }
 
-.button-3:hover {
+/* .button-3:hover {
   background-color: #2c974b;
-}
+} */
 
 .button-3:focus {
   box-shadow: rgba(46, 164, 79, 0.4) 0 0 0 3px;
@@ -296,13 +328,16 @@ main h1 {
 .button-3:disabled {
   background-color: #94d3a2;
   border-color: rgba(27, 31, 35, 0.1);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.5);
   cursor: default;
 }
 
 .button-3:active {
   background-color: #298e46;
   box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
+}
+.button-3.mode-button {
+  background-color: #3030bb;
 }
 
 /* CSS */
@@ -350,6 +385,7 @@ body {
 }
 .image-container {
   position: relative;
+  min-height: 1000px;
 }
 .image-container img {
   max-width: 100%;
@@ -374,9 +410,12 @@ body {
   top: 320px;
 }
 .image-container .hide-baton-btn {
-  /* position: absolute;
+  position: absolute;
   top: 141px;
-  right: 122px; */
+  right: 122px;
+}
+.metronome-container {
+  margin-bottom: 2rem;
 }
 
 .metronome-icons {
@@ -393,6 +432,139 @@ body {
 .metronome-icons .icon.active {
   background-color: #030e2c;
   animation: blinker 0.1s step-start;
+}
+
+.speedometer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+}
+.text-center {
+  text-align: center;
+}
+.speedometer-bar {
+  width: 300px;
+  margin: 0 10px;
+  margin-bottom: 20px;
+}
+.speed {
+  font-size: 50px;
+  color: #ed5c21;
+}
+.minus,
+.plus {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: thin solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+.speedometer span {
+  color: #ed5c21;
+  position: relative;
+  top: -11px;
+}
+.minus span {
+  position: relative;
+  bottom: 3px;
+}
+.play-btn span {
+  line-height: 80px;
+}
+.play-btn {
+  height: 80px;
+  width: 80px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: thin solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 100%;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  /* box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; */
+  background: rgb(237, 92, 33);
+  border-radius: 1.3px;
+  /* border: 0.2px solid #010101; */
+}
+input[type="range"]::-webkit-slider-thumb {
+  /* box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; */
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #ed5c21;
+}
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: rgb(237, 92, 33);
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+  background: rgb(237, 92, 33);
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type="range"]::-ms-fill-upper {
+  background: rgb(237, 92, 33);
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type="range"]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type="range"]:focus::-ms-fill-lower {
+  background: #ed5c21;
+}
+input[type="range"]:focus::-ms-fill-upper {
+  background: #ed5c21;
 }
 
 @keyframes blinker {

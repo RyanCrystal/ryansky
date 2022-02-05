@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import ReactDom from "react-dom";
 
-import img from "../../../public/img/projects/conductor-stick.png";
-
 // import "./ImageMove.css";
 
 const ImageMove = (props) => {
+  const conductor_stick = "../../../img/projects/conductor-stick.png";
   const [hideBaton, setHideBaton] = useState(false);
   if (!props.node) {
     return null;
@@ -15,7 +14,6 @@ const ImageMove = (props) => {
   };
   const beat = props.beat;
   const index = props.index;
-  console.log(index);
   let active = false;
   if (beat == 4 && (index == 0 || index == 2)) {
     active = true;
@@ -44,7 +42,7 @@ const ImageMove = (props) => {
               activeBeat3 ? "activeBeat3" : ""
             }`}
           >
-            <img src={img} alt="baton" />
+            <img src={conductor_stick} alt="baton" />
           </div>
         </div>
       )}

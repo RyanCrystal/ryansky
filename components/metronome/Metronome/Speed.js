@@ -89,8 +89,7 @@ const Speed = () => {
     defaultOptions
   );
   return (
-    <div className="speed-container container">
-      <div className="image-container" ref={imageMoveRef}></div>
+    <div className="speed-container metronome_container">
       <div className="metronome-container">
         <div className="speed">{speed}</div>
         <div className="speedometer">
@@ -116,6 +115,7 @@ const Speed = () => {
           node={imageNode}
         />
       </div>
+      <div className="image-container" ref={imageMoveRef}></div>
     </div>
   );
 };

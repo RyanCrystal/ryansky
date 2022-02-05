@@ -30,6 +30,14 @@ const Rhythm = (props) => {
   }
 
   useEffect(() => {
+    return () => {
+      console.log("unmounted");
+      clearInterval(interval.current);
+      clearTimeout(timeout.current);
+    };
+  }, []);
+
+  useEffect(() => {
     if (isPlaying) {
       playBufferList(bufferLoader.current.bufferList);
     } else {
