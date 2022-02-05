@@ -1,13 +1,14 @@
 import styles from "../styles/Projects.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 
 export function ProjectItem({ project }) {
   return (
     <div className={styles.project_item}>
       <div className={styles.project_image_container}>
         <a href={project.link} target="_blank" rel="noreferrer">
-          <img src={project.image_src} alt="" />
+          <Image src={project.image_src} alt="" />
         </a>
       </div>
       <a
