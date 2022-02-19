@@ -111,3 +111,8 @@
   font-weight: 500;
   padding: 4rem;
 }
+@media screen and (max-width: 1170px) {
+  .projects_items .project_item .project_text h1 {
+    font-size: 1.5rem;
+  }
+}
