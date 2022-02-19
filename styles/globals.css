@@ -242,6 +242,9 @@ main h1 {
   align-items: center;
   position: relative;
 }
+.step-index {
+  color: #000;
+}
 .add-step-btn {
   height: 35px;
   right: 11px;

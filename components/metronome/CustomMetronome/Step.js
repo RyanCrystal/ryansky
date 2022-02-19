@@ -30,7 +30,7 @@ const Step = (props) => {
   };
   return (
     <div className="step-container">
-      <h4>Step {props.index}</h4>
+      <h4 className="step-index">Step {props.index}</h4>
       <div className="time-signature">
         <div>Time signature</div>
         <select
