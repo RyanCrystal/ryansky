@@ -12,8 +12,14 @@ const AboutMe = () => {
               With great passion in web development,I&apos;ve been teaching
               myself all along.
               <br />
-              My focus right now is <strong>JavaScript</strong> and
-              <strong> PHP</strong>.
+              Tech stack
+              <br />
+              <div>
+                Front end:<strong>JavaScript(VueJS, ReactJS)</strong>
+              </div>
+              <div>
+                Back end:<strong>PHP, NodeJS, MySQL ... </strong>
+              </div>
             </p>
           </div>
         </div>
