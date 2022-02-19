@@ -12,13 +12,16 @@ const AboutMe = () => {
               With great passion in web development,I&apos;ve been teaching
               myself all along.
               <br />
-              Tech stack
+              Current Tech Stack
               <br />
               <div>
-                Front end:<strong>JavaScript(VueJS, ReactJS)</strong>
+                Front end: <strong>JavaScript(VueJS, ReactJS), SCSS</strong>
               </div>
               <div>
-                Back end:<strong>PHP, NodeJS, MySQL ... </strong>
+                Back end: <strong>PHP&MySQL, NodeJS&MongoDb </strong>
+              </div>
+              <div>
+                Expanding: <strong>NextJS, Python ...</strong>
               </div>
             </p>
           </div>
