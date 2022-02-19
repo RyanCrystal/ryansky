@@ -8,19 +8,26 @@ const AboutMe = () => {
         <div className={styles.about_content_left}>
           <div className={styles.img_container}></div>
           <div className={styles.intro_text}>
-            <p>
-              With great passion in web development,I&apos;ve been teaching
-              myself all along.
+            <div>
+              <p>
+                With great passion in web development,I&apos;ve been teaching
+                myself all along.
+              </p>
               <br />
               Some Technologies:
               <br />
               <div>
-                Front end: <strong>JavaScript(VueJS, ReactJS), SCSS ...</strong>
+                <p>
+                  Front end:{" "}
+                  <strong>JavaScript(VueJS, ReactJS), SCSS ...</strong>
+                </p>
               </div>
               <div>
-                Back end: <strong>PHP&MySQL, NodeJS&MongoDB ... </strong>
+                <p>
+                  Back end: <strong>PHP&MySQL, NodeJS&MongoDB ... </strong>
+                </p>
               </div>
-            </p>
+            </div>
           </div>
         </div>
       </div>
