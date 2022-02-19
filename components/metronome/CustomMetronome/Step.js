@@ -43,7 +43,7 @@ const Step = (props) => {
           <option value="3/4">3/4</option>
         </select>
       </div>
-      <div className="measures-numbers">
+      <div className="measures-numbers" style={{ width: "140px" }}>
         <div>Measure numbers</div>
         <input
           type="number"
@@ -54,7 +54,7 @@ const Step = (props) => {
           max="200"
         />
       </div>
-      <div className="tempo">
+      <div className="tempo" style={{ width: "100px" }}>
         <div>Tempo</div>
         <input
           type="number"
