@@ -12,7 +12,7 @@ const AboutMe = () => {
               With great passion in web development,I&apos;ve been teaching
               myself all along.
               <br />
-              Some Tech Stack
+              Some Technologies:
               <br />
               <div>
                 Front end: <strong>JavaScript(VueJS, ReactJS), SCSS ...</strong>
