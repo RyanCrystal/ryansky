@@ -646,7 +646,7 @@ hr {
   cursor: pointer;
   border-style: solid;
   border-width: 15px 0 15px 27px;
-  top: 25px;
+  top: 22px;
   position: relative;
   left: 9px;
 }
@@ -654,7 +654,7 @@ hr {
   border-style: double;
   border-width: 0px 0 0px 25px;
   position: relative;
-  left: 6px;
+  left: 4px;
 }
 .button:hover {
   border-color: transparent transparent transparent #e77a4f;
