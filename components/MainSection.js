@@ -22,7 +22,7 @@ export function MainSection() {
           duration={500}
         >
           View My Work&nbsp;
-          <span>
+          <span style={{ width: "21px" }}>
             <FontAwesomeIcon icon={faArrowRight} />
           </span>
         </Link>
