@@ -648,13 +648,13 @@ hr {
   border-width: 15px 0 15px 27px;
   top: 22px;
   position: relative;
-  left: 9px;
+  left: 28px;
 }
 .button.paused {
   border-style: double;
   border-width: 0px 0 0px 30px;
   position: relative;
-  left: 4px;
+  left: 24px;
 }
 .button:hover {
   border-color: transparent transparent transparent #e77a4f;

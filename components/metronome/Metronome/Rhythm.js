@@ -137,7 +137,7 @@ const Rhythm = (props) => {
       <IconList beat={beat} index={index} />
 
       <div className="play-btn" onClick={onClickHandler}>
-        <button className={`button ${isPlaying ? "paused" : ""}`}></button>
+        <div className={`button ${isPlaying ? "paused" : ""}`}></div>
       </div>
       <hr />
       <div className="tools-container">
