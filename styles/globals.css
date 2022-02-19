@@ -652,7 +652,7 @@ hr {
 }
 .button.paused {
   border-style: double;
-  border-width: 0px 0 0px 25px;
+  border-width: 0px 0 0px 30px;
   position: relative;
   left: 4px;
 }
