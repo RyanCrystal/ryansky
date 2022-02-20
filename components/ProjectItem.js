@@ -20,7 +20,6 @@ export function ProjectItem({ project }) {
       >
         View
       </a>
-
       <div className={styles.project_text}>
         <h1>{project.title}</h1>
         <h3>{project.tech}</h3>
