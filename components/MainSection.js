@@ -23,7 +23,7 @@ export function MainSection() {
         >
           View My Work&nbsp;
           <span>
-            <FontAwesomeIcon icon={faArrowRight} />
+            <FontAwesomeIcon icon={["fab", "github"]} />
           </span>
         </Link>
       </div>
