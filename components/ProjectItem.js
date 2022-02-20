@@ -26,7 +26,7 @@ export function ProjectItem({ project }) {
       </div>
       <div className={styles.github}>
         <a href={project.github_link}>
-          <FontAwesomeIcon icon={faGithub} />
+          <FontAwesomeIcon icon="fa-brands fa-github" />
         </a>
       </div>
     </div>
