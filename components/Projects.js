@@ -14,7 +14,7 @@ const projects = [
     title: "Customized metronome",
     tech: "ReactJs",
     link: "/metronome",
-    github_link: "/"
+    github_link: "https://github.com/RyanCrystal/ryansky"
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const projects = [
     title: "Real-Time Chat Application",
     tech: "Socket.io",
     link: "https://chat.ryansky.org",
-    github_link: "/"
+    github_link: "https://github.com/RyanCrystal/chat"
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const projects = [
     title: "File Share Drive",
     tech: "NodeJs, Express, Pug",
     link: "https://drive.ryansky.org",
-    github_link: "/"
+    github_link: "https://github.com/RyanCrystal/drive"
   }
 ];
 export function Projects() {

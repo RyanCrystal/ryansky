@@ -1,6 +1,6 @@
 import styles from "../styles/Projects.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faGitHub } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 
 export function ProjectItem({ project }) {
@@ -26,7 +26,7 @@ export function ProjectItem({ project }) {
       </div>
       <div className={styles.github}>
         <a href={project.github_link}>
-          <i className="fab fa-github fa-2x"></i>
+          <FontAwesomeIcon icon={faGitHub} />
         </a>
       </div>
     </div>

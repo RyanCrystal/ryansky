@@ -1,14 +1,8 @@
 import styles from "../styles/MainSection.module.css";
-// The following import prevents a Font Awesome icon server-side rendering bug,
-// where the icons flash from a very large icon down to a properly sized one:
-import "@fortawesome/fontawesome-svg-core/styles.css";
-// Prevent fontawesome from adding its CSS since we did it manually above:
-import { config } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Link from "react-scroll/modules/components/Link";
 
-config.autoAddCss = false; /* eslint-disable import/first */
 export function MainSection() {
   return (
     <>
