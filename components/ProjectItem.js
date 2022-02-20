@@ -25,7 +25,7 @@ export function ProjectItem({ project }) {
         <h3>{project.tech}</h3>
       </div>
       <div className={styles.github}>
-        <a href={project.github_link}>
+        <a href={project.github_link} style={{ color: "black" }}>
           <FontAwesomeIcon icon={faGithub} size="2x" />
         </a>
       </div>
