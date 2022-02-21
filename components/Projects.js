@@ -12,7 +12,7 @@ const projects = [
     id: 1,
     image_src: "/img/projects/project1.jpg",
     title: "Customized metronome",
-    tech: "ReactJs",
+    tech: "ReactJS",
     link: "/metronome",
     github_link: "https://github.com/RyanCrystal/ryansky"
   },
@@ -20,7 +20,7 @@ const projects = [
     id: 2,
     image_src: "/img/projects/project2.jpg",
     title: "Real-Time Chat Application",
-    tech: "Socket.io",
+    tech: "NodeJS, Express, Socket.IO",
     link: "https://chat.ryansky.org",
     github_link: "https://github.com/RyanCrystal/chat"
   },
@@ -28,7 +28,7 @@ const projects = [
     id: 3,
     image_src: "/img/projects/project3.jpg",
     title: "File Share Drive",
-    tech: "NodeJs, Express, Pug",
+    tech: "NodeJS, Express, Pug",
     link: "https://drive.ryansky.org",
     github_link: "https://github.com/RyanCrystal/drive"
   }
