@@ -15,7 +15,6 @@ const AboutMe = () => {
               </p>
               <br />
               <p>Some Technologies:</p>
-              <br />
               <div>
                 <p>
                   Front end:{" "}
