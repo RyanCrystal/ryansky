@@ -44,4 +44,7 @@
     margin: 0 auto;
     margin-bottom: 30px;
   }
+  .about_content .intro_text {
+    padding: 10px;
+  }
 }
