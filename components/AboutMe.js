@@ -14,7 +14,7 @@ const AboutMe = () => {
                 myself all along.
               </p>
               <br />
-              Some Technologies:
+              <p>Some Technologies:</p>
               <br />
               <div>
                 <p>
@@ -24,7 +24,7 @@ const AboutMe = () => {
               </div>
               <div>
                 <p>
-                  Back end: <strong>PHP&MySQL, NodeJS&MongoDB ... </strong>
+                  Back end: <strong>PHP&MySQL, NodeJS&ExpressJS ... </strong>
                 </p>
               </div>
             </div>
