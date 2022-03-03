@@ -28,6 +28,7 @@ export function ProjectItem({ project }) {
         <a
           href={project.github_link}
           target="_blank"
+          rel="noreferrer"
           style={{ color: "black" }}
         >
           <FontAwesomeIcon icon={faGithub} size="2x" />
