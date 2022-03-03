@@ -12,7 +12,7 @@ const projects = [
     id: 1,
     image_src: "/img/projects/project1.jpg",
     title: "Customized metronome",
-    tech: "ReactJS",
+    tech: "ReactJS, Web Audio Api",
     link: "/metronome",
     github_link: "https://github.com/RyanCrystal/ryansky"
   },
@@ -44,7 +44,7 @@ const projects = [
     id: 5,
     image_src: "/img/projects/business.jpeg",
     title: "Business company",
-    tech: "Bootstrap, JavaScript",
+    tech: "JavaScript, SCSS, Bootstrap",
     link: "/fs.html",
     github_link: "https://github.com/RyanCrystal/fs1"
   },
@@ -52,7 +52,7 @@ const projects = [
     id: 6,
     image_src: "/img/projects/restaurant.jpeg",
     title: "Restaurant",
-    tech: "JavaScript, Bootstrap",
+    tech: "JavaScript, SCSS, Bootstrap",
     link: "/bs.html",
     github_link: "https://github.com/RyanCrystal/bs1"
   }

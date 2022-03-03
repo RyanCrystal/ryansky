@@ -13,18 +13,18 @@
   opacity: 1;
 }
 .projects_container {
-  max-width: 1040px;
+  max-width: 1300px;
   margin: 0 auto;
   position: relative;
 }
 .projects_items {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  padding: 3rem;
+  padding: 1rem;
   place-items: center;
   -webkit-column-gap: 2rem;
   column-gap: 2rem;
-  row-gap: 3rem;
+  row-gap: 1rem;
 }
 .projects_items .project_item {
   position: relative;

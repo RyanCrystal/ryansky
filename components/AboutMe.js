@@ -18,12 +18,13 @@ const AboutMe = () => {
               <div>
                 <p>
                   Front end:{" "}
-                  <strong>JavaScript(VueJS, ReactJS), SCSS ...</strong>
+                  <strong>JavaScript (VueJS, ReactJS), SCSS ...</strong>
                 </p>
               </div>
               <div>
                 <p>
-                  Back end: <strong>PHP&MySQL, NodeJS&ExpressJS ... </strong>
+                  Back end:{" "}
+                  <strong>PHP & MySQL, NodeJS & ExpressJS ... </strong>
                 </p>
               </div>
             </div>
