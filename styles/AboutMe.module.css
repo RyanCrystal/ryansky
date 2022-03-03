@@ -35,3 +35,16 @@
   color: blue;
   font-size: 1.3rem;
 }
+
+@media screen and (max-width: 768px) {
+  .about_content .about_content_left {
+    flex-direction: column;
+  }
+  .about_content .about_content_left .img_container {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .about_content .intro_text {
+    padding: 10px;
+  }
+}
