@@ -36,7 +36,7 @@ const projects = [
     id: 4,
     image_src: "/img/projects/laundry.jpeg",
     title: "Laundry Shop",
-    tech: "JavaScript,jQuery, CSS",
+    tech: "JavaScript, jQuery, CSS",
     link: "/laundry.html",
     github_link: "https://github.com/RyanCrystal/laundry"
   },
@@ -44,7 +44,7 @@ const projects = [
     id: 5,
     image_src: "/img/projects/business.jpeg",
     title: "Business company",
-    tech: "JavaScript, SCSS, Bootstrap",
+    tech: "Bootstrap, JavaScript, SCSS",
     link: "/fs.html",
     github_link: "https://github.com/RyanCrystal/fs1"
   },
@@ -52,7 +52,7 @@ const projects = [
     id: 6,
     image_src: "/img/projects/restaurant.jpeg",
     title: "Restaurant",
-    tech: "JavaScript, SCSS, Bootstrap",
+    tech: "Bootstrap, JavaScript, jQuery, SCSS",
     link: "/bs.html",
     github_link: "https://github.com/RyanCrystal/bs1"
   }
