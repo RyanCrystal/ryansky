@@ -31,6 +31,30 @@ const projects = [
     tech: "NodeJS, Express, Pug",
     link: "https://drive.ryansky.org",
     github_link: "https://github.com/RyanCrystal/drive"
+  },
+  {
+    id: 4,
+    image_src: "/img/projects/laundry.jpeg",
+    title: "Laundry Shop",
+    tech: "JavaScript, CSS",
+    link: "/laundry.html",
+    github_link: "https://github.com/RyanCrystal/laundry"
+  },
+  {
+    id: 5,
+    image_src: "/img/projects/business.jpeg",
+    title: "Business company",
+    tech: "Bootstrap, JavaScript",
+    link: "/fs.html",
+    github_link: "https://github.com/RyanCrystal/fs1"
+  },
+  {
+    id: 6,
+    image_src: "/img/projects/restaurant.jpeg",
+    title: "Restaurant",
+    tech: "JavaScript, Bootstrap",
+    link: "/bs.html",
+    github_link: "https://github.com/RyanCrystal/bs1"
   }
 ];
 
