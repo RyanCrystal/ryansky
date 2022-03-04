@@ -15,7 +15,7 @@ const AboutMe = () => {
                 users. In my spare time, I learn online (udemy, youtube..) to
                 expand my knowledge and view.
               </p>
-              <br />
+              <p>I like playing trumpet : )</p>
               <p>Some Technologies:</p>
               <div>
                 <p>
