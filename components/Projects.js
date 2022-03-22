@@ -8,14 +8,14 @@ import { ProjectItem } from "./ProjectItem";
 // import project3_image from "../public/img/projects/project3.jpg";
 
 const projects = [
-  {
-    id: 1,
-    image_src: "/img/projects/project1.jpg",
-    title: "Customized Metronome",
-    tech: "ReactJS, Web Audio API",
-    link: "/metronome",
-    github_link: "https://github.com/RyanCrystal/ryansky"
-  },
+  // {
+  //   id: 1,
+  //   image_src: "/img/projects/project1.jpg",
+  //   title: "Customized Metronome",
+  //   tech: "ReactJS, Web Audio API",
+  //   link: "/metronome",
+  //   github_link: "https://github.com/RyanCrystal/ryansky"
+  // },
   {
     id: 2,
     image_src: "/img/projects/project2.jpg",
