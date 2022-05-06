@@ -10,20 +10,23 @@ const AboutMe = () => {
           <div className={styles.intro_text}>
             <div>
               <p>
-                With great passion in web development,I&apos;ve been teaching
-                myself all along.
+                With 3 years of working experience in web development, I feel
+                happy to be a web develper to solve problems and benefit the
+                users. In my spare time, I learn online (udemy, youtube..) to
+                expand my knowledge and view.
               </p>
-              <br />
+              <p>I like playing trumpet : )</p>
               <p>Some Technologies:</p>
               <div>
                 <p>
                   Front end:{" "}
-                  <strong>JavaScript(VueJS, ReactJS), SCSS ...</strong>
+                  <strong>JavaScript (VueJS, ReactJS, jQuery), SCSS ...</strong>
                 </p>
               </div>
               <div>
                 <p>
-                  Back end: <strong>PHP&MySQL, NodeJS&ExpressJS ... </strong>
+                  Back end:{" "}
+                  <strong>PHP & MySQL, NodeJS & ExpressJS ... </strong>
                 </p>
               </div>
             </div>

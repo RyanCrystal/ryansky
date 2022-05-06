@@ -32,7 +32,7 @@
   color: #000;
 }
 .about_content .intro_text p::first-letter {
-  color: blue;
+  /* color: blue; */
   font-size: 1.3rem;
 }
 

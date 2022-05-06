@@ -8,14 +8,14 @@ import { ProjectItem } from "./ProjectItem";
 // import project3_image from "../public/img/projects/project3.jpg";
 
 const projects = [
-  {
-    id: 1,
-    image_src: "/img/projects/project1.jpg",
-    title: "Customized metronome",
-    tech: "ReactJS",
-    link: "/metronome",
-    github_link: "https://github.com/RyanCrystal/ryansky"
-  },
+  // {
+  //   id: 1,
+  //   image_src: "/img/projects/project1.jpg",
+  //   title: "Customized Metronome",
+  //   tech: "ReactJS, Web Audio API",
+  //   link: "/metronome",
+  //   github_link: "https://github.com/RyanCrystal/ryansky"
+  // },
   {
     id: 2,
     image_src: "/img/projects/project2.jpg",
@@ -31,6 +31,30 @@ const projects = [
     tech: "NodeJS, Express, Pug",
     link: "https://drive.ryansky.org",
     github_link: "https://github.com/RyanCrystal/drive"
+  },
+  {
+    id: 4,
+    image_src: "/img/projects/laundry.jpeg",
+    title: "Laundry Shop",
+    tech: "JavaScript, jQuery, CSS",
+    link: "/laundry.html",
+    github_link: "https://github.com/RyanCrystal/laundry"
+  },
+  {
+    id: 5,
+    image_src: "/img/projects/business.jpeg",
+    title: "Business Company",
+    tech: "Bootstrap, JavaScript, SCSS",
+    link: "/fs.html",
+    github_link: "https://github.com/RyanCrystal/fs1"
+  },
+  {
+    id: 6,
+    image_src: "/img/projects/restaurant.jpeg",
+    title: "Restaurant",
+    tech: "Bootstrap, JavaScript, jQuery, SCSS",
+    link: "/bs.html",
+    github_link: "https://github.com/RyanCrystal/bs1"
   }
 ];
 
