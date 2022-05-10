@@ -294,6 +294,337 @@ $medium: 927px;
     
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
 
+:root {
+  /* Background-Colors */
+  --green: #a4d6a6;
+  --blue: hsl(210, 47%, 74%);
+  --orange: hsl(34, 93%, 77%);
+  --purple: hsl(231, 44%, 76%);
+  --yellow: hsl(54, 76%, 79%);
+  --brown: hsl(20, 41%, 69%);
+  --red: #e69e9e;
+  --pink: hsl(295, 42%, 76%);
+  --white: hsl(1, 0%, 100%);
+
+  /* Hover Colors */
+  --greenGreen: hsl(101, 100%, 30%);
+  --blueBlue: hsl(210, 100%, 50%);
+  --orangeOrange: hsl(34, 100%, 50%);
+  --purplePurple: hsl(231, 100%, 60%);
+  --yellowYellow: hsl(54, 50%, 42%);
+  --brownBrown: hsl(20, 100%, 59%);
+  --redRed: hsl(0, 100%, 60%);
+  --pinkPink: hsl(295, 58%, 34%);
+  --whiteWhite: rgb(145, 133, 133);
+}
+
+// * {
+//   padding: 0;
+//   margin: 0;
+//   box-sizing: border-box;
+//   scroll-behavior: smooth;
+// }
+
+// body {
+//   background: #350048;
+//   font-family: Arial, Helvetica, sans-serif;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: medium;
+//   font-display: auto;
+// }
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #424fad;
+}
+
+.flex {
+  position: relative;
+  display: grid;
+  place-content: center;
+  width: 230px;
+  height: 230px;
+  animation-name: planetRotate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-duration: 60s;
+  transition: 310ms;
+}
+
+@keyframes planetRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.flex:hover {
+  animation-play-state: paused;
+}
+
+.centered-image {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  animation: counterRotate 60s linear 0s infinite;
+  // animation-play-state: paused;
+
+}
+.flex:hover .centered-image{
+  animation-play-state: paused;
+
+}
+
+.centered-image:hover{
+  animation-play-state: paused;
+}
+
+
+@keyframes counterRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.centered-image > img {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 500ms;
+  border-radius: 20px;
+  opacity: 1;
+}
+
+.centered-image img:last-child:hover {
+  opacity: 0;
+}
+
+.flex span a img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  object-position: center;
+  animation-name: planetScaleUpDown;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  transition: planetScaleUpDown 500ms 5s;
+}
+
+@keyframes planetScaleUpDown {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.flex span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(80deg * var(--i)));
+}
+
+.bg {
+  width: 80px;
+  height: 80px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -30%;
+  transform: translateX(-30%);
+  animation: counterRotatePlanet 60s linear infinite alternate,;
+}
+
+@keyframes counterRotatePlanet {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.laravel {
+  background-color: var(--blue);
+}
+
+.laravel::before {
+  content: "Laravel";
+  border-radius: inherit;
+  transform: rotate(280deg);
+}
+
+.laravel:hover::before {
+  background-color: var(--blueBlue);
+  opacity: 1;
+}
+
+.vue {
+  background-color: var(--orange);
+}
+
+.vue::before {
+  content: "Vue";
+  border-radius: inherit;
+  transform: rotate(200deg);
+}
+
+.vue:hover::before {
+  background-color: var(--orangeOrange);
+  opacity: 1;
+}
+
+.react {
+  background-color: var(--purple);
+}
+
+.react::before {
+  content: "React";
+  border-radius: inherit;
+  transform: rotate(-42deg);
+}
+
+.react:hover::before {
+  background-color: var(--purplePurple);
+  opacity: 1;
+}
+
+.bootstrap {
+  background-color: var(--yellow);
+}
+
+.bootstrap::before {
+  content: "Bootstrap";
+  border-radius: inherit;
+  transform: rotate(240deg);
+}
+
+.bootstrap:hover::before {
+  background-color: var(--yellowYellow);
+  opacity: 1;
+}
+
+.php {
+  background-color: var(--green);
+}
+
+.php::before {
+  border-radius: inherit;
+  transform: rotate(120deg);
+  content: "PHP";
+}
+
+.php:hover::before {
+  background-color: var(--greenGreen);
+  opacity: 1;
+}
+
+.mysql {
+  background-color: var(--brown);
+}
+
+.mysql::before {
+  border-radius: inherit;
+  transform: rotate(40deg);
+  content: "MySQL";
+}
+
+.mysql:hover::before {
+  background-color: var(--brownBrown);
+  opacity: 1;
+}
+
+.gitlab {
+  background-color: var(--red);
+}
+
+.gitlab::before {
+  content: "GitLab";
+  border-radius: inherit;
+  transform: rotate(160deg);
+}
+
+.gitlab:hover::before {
+  background-color: var(--redRed);
+  opacity: 1;
+}
+
+.jquery {
+  background-color: var(--pink);
+}
+
+.jquery::before {
+  content: "jQuery";
+  border-radius: inherit;
+  transform: rotate(80deg);
+}
+
+.jquery:hover::before {
+  background-color: var(--pinkPink);
+  opacity: 1;
+}
+
+.js {
+  background-color: var(--white);
+}
+
+.js::before {
+  content: "JavaScript";
+  border-radius: inherit;
+}
+
+.js:hover::before {
+  background-color: var(--whiteWhite);
+  opacity: 1;
+}
+
+:is(.laravel, .vue, .php, .mysql, .bootstrap, .react, .gitlab, .jquery, .js)::before {
+  position: absolute;
+  color: white;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 150ms linear;
+  font-weight: bolder;
+  font-size: 15;
+  border-radius: inherit;
+}
+
+
 // * {
 // 	margin: 0;
 // 	padding: 0;
