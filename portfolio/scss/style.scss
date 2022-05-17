@@ -23,7 +23,6 @@ body{
 }
 #header{
   overflow: hidden;
-
   height: 100%;
   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
 }
@@ -191,6 +190,7 @@ body{
   // max-width: 1500px;
 
 }
+
 #projects .projects-container{
   max-width: 1300px;
   margin: 0 auto;
@@ -212,7 +212,22 @@ body{
 #projects .projects-container img{
   max-width: 100%;
 }
-.project-big-title{
+.about-me{
+  font-size: 23px;
+  color: #fff;
+  padding: 2rem;
+  padding-left: 0;
+  margin-bottom: 2rem;
+  justify-self: baseline;
+}
+.front-end{
+  color: rgba(128, 255, 0, .5);
+}
+.back-end{
+  color: rgb(214, 144, 184);
+}
+
+.project-big-title, .about-big-title{
   font-weight: 800;
   font-size: 65px;
   line-height: 72px;
@@ -300,6 +315,7 @@ $medium: 927px;
   --blue: hsl(210, 47%, 74%);
   --orange: hsl(34, 93%, 77%);
   --purple: hsl(231, 44%, 76%);
+  --purple:  hsl(231deg 12% 81%);
   --yellow: hsl(54, 76%, 79%);
   --brown: hsl(20, 41%, 69%);
   --red: #e69e9e;
@@ -333,16 +349,30 @@ $medium: 927px;
 //   font-size: medium;
 //   font-display: auto;
 // }
-
-.about-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 100vh;
-  width: 100%;
+#about{
   background-color: #424fad;
 }
+.about-items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+  padding: 3rem;
+  place-items: center;
+  -webkit-column-gap: 2rem;
+  grid-column-gap: 2rem;
+  -moz-column-gap: 2rem;
+  column-gap: 2rem;
+  grid-row-gap: 1rem;
+  row-gap: 3rem;
+  color: #fff;
+  // height: 500px;
+}
+.about-container{
+  max-width: 1300px;
+
+  margin: 0 auto;
+  position: relative;
+}
+
 
 .flex {
   position: relative;
@@ -357,6 +387,7 @@ $medium: 927px;
   animation-timing-function: linear;
   animation-duration: 60s;
   transition: 310ms;
+  margin-bottom: 5rem;
 }
 
 @keyframes planetRotate {
@@ -462,7 +493,7 @@ $medium: 927px;
   position: absolute;
   top: -30%;
   transform: translateX(-30%);
-  animation: counterRotatePlanet 60s linear infinite alternate,;
+  animation: counterRotatePlanet 60s linear infinite alternate;
 }
 
 @keyframes counterRotatePlanet {
@@ -481,7 +512,7 @@ $medium: 927px;
 .laravel::before {
   content: "Laravel";
   border-radius: inherit;
-  transform: rotate(280deg);
+  // transform: rotate(280deg);
 }
 
 .laravel:hover::before {
