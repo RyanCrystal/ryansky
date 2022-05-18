@@ -214,20 +214,20 @@ body{
 }
 .about-me{
   font-size: 23px;
-  color: #fff;
+  color: rgb(21, 19, 19);
   padding: 2rem;
   padding-left: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   justify-self: baseline;
 }
 .front-end{
-  color: rgba(128, 255, 0, .5);
+  color: rgba(94 ,13 ,225, .9);
 }
 .back-end{
   color: rgb(214, 144, 184);
 }
 
-.project-big-title, .about-big-title{
+.project-big-title, .about-big-title, .contact-big-title{
   font-weight: 800;
   font-size: 65px;
   line-height: 72px;
@@ -351,6 +351,10 @@ $medium: 927px;
 // }
 #about{
   background-color: #424fad;
+  background-image: url('../img/sea-moon.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .about-items-container {
   display: grid;
@@ -365,6 +369,9 @@ $medium: 927px;
   row-gap: 3rem;
   color: #fff;
   // height: 500px;
+}
+.back-end-tech{
+  color: #000;
 }
 .about-container{
   max-width: 1300px;
@@ -654,6 +661,62 @@ $medium: 927px;
   font-size: 15;
   border-radius: inherit;
 }
+.contact-container{
+  background: #852323;
+  background-image: url('../img/sea-bottom.jpeg');
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+.contact-container input, .contact-container textarea{
+  min-width: 200px;
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 20px;
+}
+.contact-container [type=submit] {
+  box-sizing: content-box;
+}
+.contact-me-text{
+  color: #424fad;
+}
+@media screen and (min-width: 769px) and (max-width: 1170px){
+  #contact input, #contact textarea {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 768px){
+  #contact input, #contact textarea {
+    width: 70%;
+  }
+}
+
+.contact-container textarea::placeholder {
+  // color: blue;
+  // font-size: 1.5em;
+  font-family: Arial;
+}
+.contact-container [type=submit]:hover{
+  background-color: #852323;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 500px){
+  #contact input, #contact textarea {
+    width: 80%;
+  }
+}
+
+
+
 
 
 // * {
