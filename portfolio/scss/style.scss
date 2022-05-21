@@ -20,6 +20,7 @@ body{
   height: 100%;
   margin: 0;
   font-family: 'Lato', sans-serif;
+  background-color: #1b2735;
 }
 #header{
   overflow: hidden;
@@ -223,10 +224,13 @@ body{
   justify-self: baseline;
 }
 .front-end{
-  color: rgba(94 ,13 ,225, .9);
+  // color: rgba(94 ,13 ,225, .9);
+  color: rgba(67 ,221 ,16 ,0.9);
+  
 }
 .back-end{
   color: rgb(214, 144, 184);
+  color: #df0f86;
   // color: #fff;
 }
 
@@ -248,6 +252,16 @@ body{
   margin-left: 3rem;
   text-align: center;
   // margin: 0;
+}
+.project-big-title::before, .about-big-title::before, .contact-big-title::before{
+  content: '';
+  width: 100px;
+  height: 6px;
+  display: block;
+  margin-top: 3rem;
+  border-radius: 10px;
+  // background-color: #fff;
+  background: linear-gradient(270deg,#13ADC7 0%,#945DD6 100%);
 }
 .tech-used{
   display: flex;
@@ -676,6 +690,9 @@ $medium: 927px;
   padding-bottom: 5rem;
   text-align: center;
   box-sizing: border-box;
+  max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
 }
 .section-divider{
   width: 100px;
@@ -700,7 +717,10 @@ $medium: 927px;
   box-sizing: content-box;
 }
 .contact-me-text{
-  color: #424fad;
+  // color: #424fad;
+  color: rgba(67, 221, 16, 0.9);
+  // color: #df0f86;
+
 }
 @media screen and (min-width: 769px) and (max-width: 1170px){
   #contact input, #contact textarea {
@@ -720,8 +740,8 @@ $medium: 927px;
   font-family: Arial;
 }
 .contact-container [type=submit]:hover{
-  background-color: #852323;
-  background-color: #07a9e6;
+  // background-color: #07a9e6;
+  background-color: #1b2735;
   color: #fff;
   cursor: pointer;
 }
