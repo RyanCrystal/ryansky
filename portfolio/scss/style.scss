@@ -181,7 +181,8 @@ body{
 }
 #projects{
   // background: linear-gradient(121.57deg,#352b2b 18.77%,rgba(255, 254, 254, 0.66) 60.15%);
-  background: linear-gradient(121.57deg,rgba(27, 39, 53, 1) 30.77%,rgba(90, 86, 86, 0.66) 90.15%);
+  // background: linear-gradient(121.57deg,rgba(27, 39, 53, 1) 30.77%,rgba(90, 86, 86, 0.66) 90.15%);
+  background-color: #1b2735;
 
    
   // background-color: #352b2b;
@@ -214,7 +215,8 @@ body{
 }
 .about-me{
   font-size: 23px;
-  color: rgb(21, 19, 19);
+  // color: rgb(21, 19, 19);
+  color: #fff;
   padding: 2rem;
   padding-left: 0;
   margin-bottom: 3rem;
@@ -225,6 +227,7 @@ body{
 }
 .back-end{
   color: rgb(214, 144, 184);
+  // color: #fff;
 }
 
 .project-big-title, .about-big-title, .contact-big-title{
@@ -240,6 +243,7 @@ body{
   -webkit-text-fill-color: transparent;
   margin-bottom: 16px;
   padding: 58px 0 16px;
+  padding-top: 0;
   margin-top: 0;
   margin-left: 3rem;
   text-align: center;
@@ -316,6 +320,7 @@ $medium: 927px;
   --orange: hsl(34, 93%, 77%);
   --purple: hsl(231, 44%, 76%);
   --purple:  hsl(231deg 12% 81%);
+  --purple:  #465295;
   --yellow: hsl(54, 76%, 79%);
   --brown: hsl(20, 41%, 69%);
   --red: #e69e9e;
@@ -351,7 +356,8 @@ $medium: 927px;
 // }
 #about{
   background-color: #424fad;
-  background-image: url('../img/sea-moon.jpeg');
+  background-color: #1b2735;
+  // background-image: url('../img/sea-moon.jpeg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -371,7 +377,8 @@ $medium: 927px;
   // height: 500px;
 }
 .back-end-tech{
-  color: #000;
+  // color: #000;
+  color: #fff;
 }
 .about-container{
   max-width: 1300px;
@@ -662,12 +669,22 @@ $medium: 927px;
   border-radius: inherit;
 }
 .contact-container{
-  background: #852323;
-  background-image: url('../img/sea-bottom.jpeg');
-  padding-top: 5rem;
+  // background: #852323;
+  background-color: #1b2735;
+  // background-image: url('../img/sea-bottom.jpeg');
+  // padding-top: 5rem;
   padding-bottom: 5rem;
   text-align: center;
   box-sizing: border-box;
+}
+.section-divider{
+  width: 100px;
+  height: 6px;
+  margin-top: 3rem;
+  margin-left: 3rem;
+  border-radius: 10px;
+  // background-color: #fff;
+  background: linear-gradient(270deg,#13ADC7 0%,#945DD6 100%);
 }
 .contact-container input, .contact-container textarea{
   min-width: 200px;
@@ -704,6 +721,7 @@ $medium: 927px;
 }
 .contact-container [type=submit]:hover{
   background-color: #852323;
+  background-color: #07a9e6;
   color: #fff;
   cursor: pointer;
 }
