@@ -14,6 +14,7 @@
   
   html{
     height: 100%;
+    scroll-behavior: smooth;
   }
   body{
     height: 100%;
@@ -160,6 +161,10 @@
   .view-work-container{
     display: inline-block;
     margin-top: 5rem;
+  }
+
+  #header .view-work a{
+    text-decoration: none;
   }
   
   #header .view-work span{

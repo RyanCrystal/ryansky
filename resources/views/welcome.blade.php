@@ -1,81 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/app.css">
-    
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/app.css">
+
+  <title>Document</title>
 </head>
+
 <body>
-    <section id="header">
-        <div id='stars'></div>
-        <div id='stars2'></div>
-        <div id='stars3'></div>
-        <div id='title'>
-            <span class="name">
-                Ryan Wang
-            </span>
-            <br>
-            <span class="web-title">
-                Full Stack Web Developer
-            </span>
-            <div class="view-work-container">
-               <button class="view-work" data-tool-tip="Click to launch!">
-                   <span>View My Work</span>
-                   <img src="{{url('/img/rocket.png')}}"  alt="rocket"/>
-               </button>
+  <section id="header">
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+    <div id='title'>
+      <span class="name">
+        Ryan Wang
+      </span>
+      <br>
+      <span class="web-title">
+        Full Stack Web Developer
+      </span>
+      <div class="view-work-container">
+        <button class="view-work" data-tool-tip="Click to launch!">
+          <a href="#projects"><span>View My Work</span></a>
+          <img src="{{url('/img/rocket.png')}}" alt="rocket" />
+        </button>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <div class="projects-container">
+      <h2 class="project-big-title">Projects</h2>
+      <div class="project-items-container">
+        <div class="project">
+          <img src="{{url('/img/1.png')}}" alt="Commerce">
+          <div class="project-content">
+            <div class="project-title">Ecommerce</div>
+            <hr class="title-line">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, cupiditate? Quasi molestias temporibus nobis dolorem itaque iusto distinctio, hic necessitatibus esse. Dolores doloremque pariatur officia saepe cum nulla voluptatem numquam!</p>
+            <div class="tech-used">
+              <span>Laravel</span>
+              <span>VueJS</span>
+              <span>MySQL</span>
+              <span>Stripe API</span>
             </div>
+          </div>
         </div>
-    </section>
-    <section id="projects">
-        <div class="projects-container">
-             <h2 class="project-big-title">Projects</h2>
-             <div class="project-items-container">
-                <div class="project">
-                    <img src="{{url('/img/1.png')}}" alt="Commerce">
-                    <div class="project-content">
-                        <div class="project-title">Ecommerce</div>
-                        <hr class="title-line">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, cupiditate? Quasi molestias temporibus nobis dolorem itaque iusto distinctio, hic necessitatibus esse. Dolores doloremque pariatur officia saepe cum nulla voluptatem numquam!</p>
-                        <div class="tech-used">
-                            <span>Laravel</span>
-                            <span>VueJS</span>
-                            <span>MySQL</span>
-                            <span>Stripe API</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project">
-                    <img src="{{url('/img/2.jpg')}}" alt="Bootstrap sample">
-                    <div class="project-content">
-                        <div class="project-title">Boostrap sample</div>
-                        <hr class="title-line">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere enim quibusdam aliquam autem vitae ad ducimus exercitationem laboriosam omnis. Culpa doloribus ipsa voluptates repudiandae amet enim aliquam dolores architecto qui. .</p>
-                        <div class="tech-used">
-                            <span>Boostrap 5</span>
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
-                </div>  
-                <div class="project">
-                    <img src="{{url('/img/3.jpg')}}" alt="JS Game">
-                    <div class="project-content">
-                        <div class="project-title">JS Game</div>
-                        <hr class="title-line">
-                        <p>orem, ipsum dolor sit amet consectetur adipisicing elit. Facere enim quibusdam aliquam autem vitae ad ducimus exercitationem laboriosam omnis. Culpa doloribus ipsa voluptates repudiandae amet enim aliquam dolores architecto qui. .</p>
-                        <div class="tech-used">
-                            <span>JavaScript</span>
-                            <span>CSS3</span>
-                        </div>
-                    </div>
-                </div>    
+        <div class="project">
+          <img src="{{url('/img/2.jpg')}}" alt="Bootstrap sample">
+          <div class="project-content">
+            <div class="project-title">Boostrap sample</div>
+            <hr class="title-line">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere enim quibusdam aliquam autem vitae ad ducimus exercitationem laboriosam omnis. Culpa doloribus ipsa voluptates repudiandae amet enim aliquam dolores architecto qui. .</p>
+            <div class="tech-used">
+              <span>Boostrap 5</span>
+              <span>JavaScript</span>
             </div>
+          </div>
         </div>
-    </section>
-    <!-- <h2 class="border">wavy</h2>
+        <div class="project">
+          <img src="{{url('/img/3.jpg')}}" alt="JS Game">
+          <div class="project-content">
+            <div class="project-title">JS Game</div>
+            <hr class="title-line">
+            <p>orem, ipsum dolor sit amet consectetur adipisicing elit. Facere enim quibusdam aliquam autem vitae ad ducimus exercitationem laboriosam omnis. Culpa doloribus ipsa voluptates repudiandae amet enim aliquam dolores architecto qui. .</p>
+            <div class="tech-used">
+              <span>JavaScript</span>
+              <span>CSS3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <h2 class="border">wavy</h2>
 <h2 class="wave">wavy</h2>
 
 <h2 class="border two">wavy</h2>
@@ -83,38 +85,41 @@
 
 <h2 class="border three">wavy</h2>
 <h2 class="wave three">wavy</h2> -->
-<section id="about">
+  <section id="about">
     <div class="about-container">
-        <h2 class="about-big-title">
-         About me
-        </h2>
-        <div class="about-items-container">
-          <div class="about-me">
+      <h2 class="about-big-title">
+        About me
+      </h2>
+      <div class="about-items-container">
+        <div class="about-me">
           <p>3+ years Full Stack web developer specialising in PHP and JS.</p>
 
-            <span class="current-tech">Current tech stack:</span>
+          <span class="current-tech">Current tech stack:</span>
 
-          <p> <div class="front-end">Front End:</div> VueJS, ReactJS, JavaScript, jQuery, Bootstrap, SCSS, CSS3, HTML5<br>
+          <p>
+          <div class="front-end">Front End:</div> VueJS, ReactJS, JavaScript, jQuery, Bootstrap, SCSS, CSS3, HTML5<br>
           <br>
-           <div class="back-end"> Back End:</div> <div class="back-end-tech">Laravel, PHP, MySQL, Node.js, Elastic Search</div></p>
-          </div>
-          <div class="flex">
+          <div class="back-end"> Back End:</div>
+          <div class="back-end-tech">Laravel, PHP, MySQL, Node.js, Elastic Search</div>
+          </p>
+        </div>
+        <div class="flex">
           <div class="one">
             <span style="--i: 1">
-                <a href="#">
-                    <div class="bg laravel">
-                    <img src="{{url('/img/laravel.png')}}" alt="Laravel" />
-                    </div>
-                </a>
+              <a href="#">
+                <div class="bg laravel">
+                  <img src="{{url('/img/laravel.png')}}" alt="Laravel" />
+                </div>
+              </a>
             </span>
           </div>
           <div class="two">
             <span style="--i: 2">
-                <a href="#">
-                    <div class="bg vue">
-                    <img src="{{url('/img/vue.png')}}" alt="Vue" />
-                    </div>
-                </a>
+              <a href="#">
+                <div class="bg vue">
+                  <img src="{{url('/img/vue.png')}}" alt="Vue" />
+                </div>
+              </a>
             </span>
           </div>
           <div class="three">
@@ -148,7 +153,7 @@
           <div class="seven">
             <span style="--i: 7"><a href="#">
                 <div class="bg gitlab">
-                  <img src="{{url('/img/gitlab.png')}}"  alt="Gitlab" />
+                  <img src="{{url('/img/gitlab.png')}}" alt="Gitlab" />
                 </div>
               </a></span>
           </div>
@@ -167,29 +172,28 @@
               </a></span>
           </div>
           <div class="centered-image">
-            <img src="{{url('/img/avatar2.png')}}"  class="img-bottom" alt="Avatar 2" />
+            <img src="{{url('/img/avatar2.png')}}" class="img-bottom" alt="Avatar 2" />
             <img src="{{url('/img/avatar.png')}}" class="img-top" alt="Avatar" />
-          </div>
           </div>
         </div>
       </div>
-</section>
-<section id="contact">
-  <div class="contact-container">
-    <h2 class="contact-big-title">Contact</h2>
-    <p class="contact-me-text">Contact me by form below or email me (<span class="my-email"> slaric2014@gmail.com </span>)</p>
-    <form class="contact-form" action="">
-      <input type="text" placeholder="Name" />
-      <br />
-      <input type="email" placeholder="Email" />
-      <br />
-      <textarea rows="8" placeholder="Messages..."></textarea>
-      <br />
-      <input type="submit" value="SUBMIT" />
-    </form>
-  </div>
-</section>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="contact-container">
+      <h2 class="contact-big-title">Contact</h2>
+      <p class="contact-me-text">Contact me by form below or email me (<span class="my-email"> slaric2014@gmail.com </span>)</p>
+      <form class="contact-form" action="">
+        <input type="text" placeholder="Name" />
+        <br />
+        <input type="email" placeholder="Email" />
+        <br />
+        <textarea rows="8" placeholder="Messages..."></textarea>
+        <br />
+        <input type="submit" value="SUBMIT" />
+      </form>
+    </div>
+  </section>
 </body>
+
 </html>
-
-
