@@ -1,0 +1,118 @@
+#projects .projects_items {
+  width: 80%;
+  margin: 0 auto;
+  grid-row-gap: 0;
+  display: none;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+  grid-template-columns: repeat(3, 1fr);
+}
+#projects .projects_items.active {
+  transition: all 0.5s ease-out;
+  display: grid;
+  opacity: 1;
+}
+.projects_container {
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+}
+.projects_items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 1rem;
+  place-items: center;
+  -webkit-column-gap: 2rem;
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+.projects_items .project_item {
+  position: relative;
+  transition: all 0.5s ease-out;
+}
+.projects_items .project_item img:hover {
+  transition: all 0.5s ease-out;
+  /* border: 5px solid rgb(243, 24, 24); */
+}
+.projects_items .project_item .project_text {
+  opacity: 0;
+  position: absolute;
+  top: 0%;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  text-align: center;
+  transition: all 0.5s ease-out;
+}
+.projects_items .project_item .project_text h1 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+.projects_items .project_item .project_text h3 {
+  color: red;
+}
+.projects_items .project_item .github {
+  opacity: 0;
+  top: 5%;
+  right: 5%;
+  z-index: 5;
+  position: absolute;
+  transition: all 0.5s ease-out;
+}
+.projects_items .project_item .github i {
+  color: black;
+}
+.projects_items .project_item .project_item_btn {
+  opacity: 0;
+  position: absolute;
+  bottom: 0%;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  width: 170px;
+  color: #000;
+  border: 2px solid #852323;
+  text-align: center;
+  transition: all 0.5s ease-out;
+}
+.projects_items .project_item .project_item_btn:hover {
+  background: #852323;
+  color: #fff;
+}
+.projects_items .project_item:hover .project_item_btn {
+  opacity: 1;
+  display: block;
+  bottom: 20%;
+  padding: 0.5rem 1rem;
+  border: 2px solid #852323;
+  text-align: center;
+  z-index: 5;
+}
+.projects_items .project_item:hover {
+  /* border: 1px solid #6fa3d1; */
+}
+.projects_items .project_item:hover .project_text {
+  opacity: 1;
+  display: block;
+  top: 20%;
+}
+.projects_items .project_item:hover .github {
+  opacity: 1;
+}
+.projects_items .project_item:hover img {
+  opacity: 0.3;
+}
+.projects_items img {
+  width: 100%;
+}
+.projects_container .projects_big_title {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 500;
+  padding: 4rem;
+}
+@media screen and (max-width: 1170px) {
+  .projects_items .project_item .project_text h1 {
+    font-size: 1.5rem;
+  }
+}
