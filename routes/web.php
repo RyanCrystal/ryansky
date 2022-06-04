@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Listing;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/listing', function () {
+    return view('listing', [
+        'heading' => 'This is the heading',
+        'listings' => Listing::all()
+    ]);
+});
+
+
+Route::post('/', []);

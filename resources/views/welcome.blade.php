@@ -189,7 +189,7 @@
         <br />
         <input type="email" placeholder="Email" />
         <br />
-        <textarea rows="8" placeholder="Messages..."></textarea>
+        <textarea rows="8" placeholder="Messages..." maxlength="1000"></textarea>
         <br />
         <input type="submit" value="SUBMIT" />
       </form>
