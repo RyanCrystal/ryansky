@@ -22,7 +22,7 @@ class ContactMeMessageController extends Controller
 
         ContactMeMessage::create($formFields);
 
-        Mail::to('slaric2014@gmail.com')->send(new ContactMe());
-        return view('welcome');
+        // Mail::to('slaric2014@gmail.com')->send(new ContactMe());
+        return view('welcome')->with('message', 'Your message has been sent, thanks!');
     }
 }
