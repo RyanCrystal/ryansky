@@ -8,7 +8,18 @@
   <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
   <link rel="icon" href="{{ url('img/favicon.jpg') }}">
   <link rel="stylesheet" href="css/app.css">
-
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      laravel: "#ef3b2d",
+                  },
+              },
+          },
+      };
+  </script>
   <title>Porfolio-Ryan</title>
 </head>
 
@@ -104,7 +115,7 @@
           <div class="back-end-tech">Laravel, PHP, MySQL, Node.js, Elastic Search</div>
           </p>
         </div>
-        <div class="flex">
+        <div class="flex grid">
           <div class="one">
             <span style="--i: 1">
               <a href="#">
@@ -183,18 +194,20 @@
   <section id="contact">
     <div class="contact-container">
       <h2 class="contact-big-title">Contact</h2>
-      <p class="contact-me-text">Contact me by form below or email me (<span class="my-email"> slaric2014@gmail.com </span>)</p>
-      <form class="contact-form" action="">
-        <input type="text" placeholder="Name" />
+      <p class="contact-me-text">Contact me by form below or <a class="text-email" href="mailto:slaric2014@gmail.com">Email me</a></p>
+      <form method="POST" class="contact-form" action="/">
+        @csrf
+        <input type="text" name="name" placeholder="Name" />
         <br />
-        <input type="email" placeholder="Email" />
+        <input type="email" name="email" placeholder="Email" />
         <br />
-        <textarea rows="8" placeholder="Messages..." maxlength="1000"></textarea>
+        <textarea rows="8" name="message" placeholder="Messages..." maxlength="1000"></textarea>
         <br />
-        <input type="submit" value="SUBMIT" />
+        <input class="text-white" type="submit" value="SUBMIT" />
       </form>
     </div>
   </section>
+  <x-flash-message />
 </body>
 
 </html>

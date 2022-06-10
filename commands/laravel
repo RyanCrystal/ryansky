@@ -1,0 +1,17 @@
+#create migration file
+php artisan make:migration create_listings_table
+
+#run migration file
+php artisan migrate
+
+#seed data into db (for development)
+php artisan db:seed
+
+# run migrateion file and seed
+php artisan migrate:fresh --seed
+
+# create model file
+php artisan make:model Listing
+
+# create factory
+php artisan make:factory ListingFactory

@@ -717,8 +717,11 @@
     border-radius: 4px;
     font-size: 20px;
   }
+  .text-email{
+    color: #945DD6
+  }
   .contact-container [type=submit] {
-    box-sizing: content-box;
+    // box-sizing: content-box;
   }
   .contact-me-text{
     color: #fff;
@@ -745,8 +748,8 @@
   }
   .contact-container [type=submit]:hover{
     // background-color: #07a9e6;
-    background-color: #1b2735;
-    color: #fff;
+    background-color: #fff;
+    color: #1b2735;
     cursor: pointer;
   }
   

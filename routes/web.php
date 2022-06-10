@@ -2,6 +2,7 @@
 
 use App\Models\Listing;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactMeMessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +27,4 @@ Route::get('/listing', function () {
 });
 
 
-Route::post('/', []);
+Route::post('/', [ContactMeMessageController::class, 'submit']);
