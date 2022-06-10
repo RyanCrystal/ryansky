@@ -23,6 +23,6 @@ class ContactMeMessageController extends Controller
         ContactMeMessage::create($formFields);
 
         // Mail::to('slaric2014@gmail.com')->send(new ContactMe());
-        return redirect('/')->with('message', 'Your message has been sent, thanks!');
+        return redirect('/')->with('message', "Your message has been sent, thanks! \u{1F604}");
     }
 }
