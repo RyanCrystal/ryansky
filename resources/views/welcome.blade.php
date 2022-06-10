@@ -8,13 +8,14 @@
   <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
   <link rel="icon" href="{{ url('img/favicon.jpg') }}">
   <link rel="stylesheet" href="css/app.css">
+  <script src="//unpkg.com/alpinejs" defer></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
       tailwind.config = {
           theme: {
               extend: {
                   colors: {
-                      laravel: "#ef3b2d",
+                      laravel: "#945DD6",
                   },
               },
           },
