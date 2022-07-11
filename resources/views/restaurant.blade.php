@@ -273,7 +273,7 @@
                   <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-4">
                         <div class="card  m-4">
-                            <img class="card-img-top" src="{{url(img/restaurant/m1.jpg)}}" alt="Card image cap">
+                            <img class="card-img-top" src="{{url('img/restaurant/m1.jpg')}}" alt="Card image cap">
                             <div class="card-body">
                                 <h4 class="card-title">Title</h4>
                                 <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum aspernatur placeat amet iusto magnam quaerat ab suscipit minus, sunt, tempore maxime mollitia commodi officiis nulla dolorem labore! Eius, laborum nihil.</p>
