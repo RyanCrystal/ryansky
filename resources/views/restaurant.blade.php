@@ -25,7 +25,7 @@
       id="navbarNav"
     >
       <div class="container">
-        <a class="navbar-brand" href="/#home">FASHION</a>
+        <a class="navbar-brand" href="/restaurant#home">FASHION</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -49,8 +49,8 @@
             <li class="nav-item">
               <a class="nav-link" href="/restaurant#team">Team</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="/restaurant/#menu">Menu</a></li>
-            <li class="nav-item"><a class="nav-link" href="/restaurant/#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="/restaurant#menu">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="/restaurant#contact">Contact</a></li>
           </ul>
         </div>
       </div>
