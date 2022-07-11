@@ -235,7 +235,7 @@
       <div class="container">
         <div class="row">
           <div class="col p-5">
-            <img src="img/restaurant/team.jpg" alt="Team" class="fluid" />
+            <img src="{{url('img/restaurant/team.jpg')}}" alt="Team" class="fluid" />
           </div>
           <div class="col p-5 text-light">
             <h1>Our Team</h1>
@@ -273,7 +273,7 @@
                   <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-4">
                         <div class="card  m-4">
-                            <img class="card-img-top" src="img/restaurant/m1.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="{{url(img/restaurant/m1.jpg)}}" alt="Card image cap">
                             <div class="card-body">
                                 <h4 class="card-title">Title</h4>
                                 <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum aspernatur placeat amet iusto magnam quaerat ab suscipit minus, sunt, tempore maxime mollitia commodi officiis nulla dolorem labore! Eius, laborum nihil.</p>
@@ -283,7 +283,7 @@
                     
                     <div class="col-sm-12 col-md-12 col-lg-4">
                         <div class="card  m-4">
-                            <img class="card-img-top" src="img/restaurant/m2.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="{{url('img/restaurant/m2.jpg')}}" alt="Card image cap">
                             <div class="card-body">
                                 <h4 class="card-title">Title</h4>
                                 <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum aspernatur placeat amet iusto magnam quaerat ab suscipit minus, sunt, tempore maxime mollitia commodi officiis nulla dolorem labore! Eius, laborum nihil.</p>
@@ -292,7 +292,7 @@
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-4">
                         <div class="card  m-4">
-                            <img class="card-img-top" src="img/restaurant/m3.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="{{url('img/restaurant/m3.jpg')}}" alt="Card image cap">
                             <div class="card-body">
                                 <h4 class="card-title">Title</h4>
                                 <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum aspernatur placeat amet iusto magnam quaerat ab suscipit minus, sunt, tempore maxime mollitia commodi officiis nulla dolorem labore! Eius, laborum nihil.</p>
@@ -327,21 +327,21 @@
       
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-              <img src="img/restaurant/pp1.jpg" alt="First slide" class="rounded-circle pb-3">
+              <img src="{{url('img/restaurant/pp1.jpg')}}" alt="First slide" class="rounded-circle pb-3">
               
                 <h3>John Doe</h3>
                 <p><em>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime praesentium porro quos soluta tempora facere sunt corporis quas corrupti excepturi.</em></p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="img/restaurant/pp2.jpg" alt="Second slide" class="rounded-circle pb-3">
+              <img src="{{url('img/restaurant/pp2.jpg')}}" alt="Second slide" class="rounded-circle pb-3">
               
                 <h3>John Jenny</h3>
                 <p><em>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae animi nostrum tempore. Ab non sint recusandae nulla. Neque, eos obcaecati!</em></p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="img/restaurant/pp3.jpg" alt="Third slide" class="rounded-circle pb-3">
+              <img src="{{url('img/restaurant/pp3.jpg')}}" alt="Third slide" class="rounded-circle pb-3">
               
                 <h3>David Robinson</h3>
                 <p><em> ipsum dolor sit amet consectetur adipisicing elit. Ut praesentium sit possimus dolores esse molestias ipsum assumenda omnis natus accusamus?</em></p>
