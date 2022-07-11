@@ -41,16 +41,16 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item ">
-              <a class="nav-link" href="/#carouselId">Home</a>
+              <a class="nav-link" href="/restaurant/#carouselId">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/#intro">Intro</a>
+              <a class="nav-link" href="/restaurant/#intro">Intro</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/#team">Team</a>
+              <a class="nav-link" href="/restaurant/#team">Team</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="/#menu">Menu</a></li>
-            <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="/restaurant/#menu">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="/restaurant/#contact">Contact</a></li>
           </ul>
         </div>
       </div>
