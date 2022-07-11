@@ -50,43 +50,64 @@
       <h2 class="project-big-title">Projects</h2>
       <div class="project-items-container">
         <div class="project">
-          <img src="{{url('/img/1.png')}}" alt="Commerce">
+            <img src="{{url('/img/3.jpg')}}" alt="Multilearning">
           <div class="project-content">
-            <div class="project-title">Ecommerce</div>
+            <div class="project-title">Multilearning Group</div>
             <hr class="title-line">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, cupiditate? Quasi molestias temporibus nobis dolorem itaque iusto distinctio, hic necessitatibus esse. Dolores doloremque pariatur officia saepe cum nulla voluptatem numquam!</p>
+            <p>I have developed many features from back end to front end, including floating banner,the slider, the layout improvement, etc.</p>
+            <div class="text-center mb-3 mt-3">Tech stack</div>
             <div class="tech-used">
-              <span>Laravel</span>
-              <span>VueJS</span>
+              <span>PHP</span>
               <span>MySQL</span>
-              <span>Stripe API</span>
+              <span>VueJS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="view">
+              <a href="https://academy.multilearning.com/mlg/#!*menu=24*browseby=9*sortby=1*trend=15341" target="_blank">
+              View
+              </a>
             </div>
           </div>
         </div>
         <div class="project">
-          <img src="{{url('/img/2.jpg')}}" alt="Bootstrap sample">
+          <img src="{{url('/img/1.png')}}" alt="Commerce">
           <div class="project-content">
-            <div class="project-title">Boostrap sample</div>
+            <div class="project-title">Business portfolio</div>
             <hr class="title-line">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere enim quibusdam aliquam autem vitae ad ducimus exercitationem laboriosam omnis. Culpa doloribus ipsa voluptates repudiandae amet enim aliquam dolores architecto qui. .</p>
+            <p>This is a website I developed for a new marketing company of my friend, I converted from the web design to a functioning wesbite.</p>
+            <div class="text-center mb-3 mt-3">Tech stack</div>
+            <div class="tech-used">
+              <span>Laravel</span>
+              <span>Tailwind CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="view">
+              <a href="https://epoquemarketing.ca/" target="_blank">
+              View
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project">
+          <a href=""><img src="{{url('/img/2.jpg')}}" alt="Bootstrap5"></a>
+          <div class="project-content">
+            <div class="project-title">Bootstrap 5 sample</div>
+            <hr class="title-line">
+            <p>This is a responsive website built with the latest Bootstrap5, it is much quicker to build a repsonsive webiste using bootstrap. </p>
+            <div class="text-center mb-3 mt-3">Tech stack</div>
             <div class="tech-used">
               <span>Boostrap 5</span>
               <span>JavaScript</span>
+              <span>jQuery</span>
+            </div>
+            <div class="view">
+              <a href="/restaurant" target="_blank">
+              View
+              </a>
             </div>
           </div>
         </div>
-        <div class="project">
-          <img src="{{url('/img/3.jpg')}}" alt="JS Game">
-          <div class="project-content">
-            <div class="project-title">JS Game</div>
-            <hr class="title-line">
-            <p>orem, ipsum dolor sit amet consectetur adipisicing elit. Facere enim quibusdam aliquam autem vitae ad ducimus exercitationem laboriosam omnis. Culpa doloribus ipsa voluptates repudiandae amet enim aliquam dolores architecto qui. .</p>
-            <div class="tech-used">
-              <span>JavaScript</span>
-              <span>CSS3</span>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   </section>
