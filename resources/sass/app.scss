@@ -729,6 +729,25 @@
   .my-email{
       color: rgba(67, 221, 16, 0.9);
   }
+  #team {
+    background: linear-gradient(#e26161, #e0dbdb);
+}
+#menu .card {
+  box-shadow: 2px 5px 20px #777;
+}
+#ad {
+  background-attachment: fixed;
+  background-position: 0 0% 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+#testimonials {
+  background: #444;
+}
+#testimonials .test {
+  padding: 100px;
+}
   @media screen and (min-width: 769px) and (max-width: 1170px){
     #contact input, #contact textarea {
       width: 60%;

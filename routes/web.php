@@ -28,3 +28,8 @@ Route::get('/listing', function () {
 
 
 Route::post('/', [ContactMeMessageController::class, 'submit']);
+
+
+Route::get('/restaurant', function () {
+    return view('restaurant');
+});
