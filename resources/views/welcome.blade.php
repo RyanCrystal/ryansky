@@ -62,11 +62,9 @@
               <span>VueJS</span>
               <span>JavaScript</span>
             </div>
-            <div class="view">
-              <a href="https://academy.multilearning.com/mlg/#!*menu=24*browseby=9*sortby=1*trend=15341" target="_blank">
+            <a class="view" href="https://academy.multilearning.com/mlg/#!*menu=24*browseby=9*sortby=1*trend=15341" target="_blank">
               View
-              </a>
-            </div>
+            </a>
           </div>
         </div>
         <div class="project">
@@ -81,11 +79,9 @@
               <span>Tailwind CSS</span>
               <span>JavaScript</span>
             </div>
-            <div class="view">
-              <a href="https://epoquemarketing.ca/" target="_blank">
+            <a href="https://epoquemarketing.ca/" target="_blank" class="view">
               View
-              </a>
-            </div>
+            </a>
           </div>
         </div>
         <div class="project">
@@ -100,11 +96,9 @@
               <span>JavaScript</span>
               <span>jQuery</span>
             </div>
-            <div class="view">
-              <a href="/restaurant" target="_blank">
+            <a href="/restaurant" target="_blank" class="view">
               View
               </a>
-            </div>
           </div>
         </div>
         
